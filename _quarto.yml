@@ -1,0 +1,80 @@
+project:
+  type: website
+  output-dir: _site
+  preview:
+    port: 5689
+    browser: true
+    watch-inputs: true
+    navigate: true
+author:
+- id: wittkuhn
+  name:
+    given: Lennart
+    family: Wittkuhn
+    literal: Dr. Lennart Wittkuhn
+  url: "{{< var homepage >}}"
+  email: "{{< var email >}}"
+  orcid: "{{< var orcid >}}"
+  # note: string
+  # acknowledgements: string
+  attributes:
+    corresponding: true
+    # equal-contributor: boolean
+    # deceased: boolean
+  # metadata: object
+  affiliations:
+    - ref: uhh-psych
+    # - ref: mpib
+    # - ref: mps-ucl
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    smooth-scroll: true
+    html-math-method: katex
+    email-obfuscation: none
+    toc: false
+    toc-depth: 2
+    toc-title: "Agenda"
+    number-sections: false
+    scrollable: true
+    # logo: static/images/uhh-logo-web.gif
+    footer: "{{< var footer >}}"
+    transition: none
+    transition-speed: fast
+    slide-number: "c/t"
+    fig-cap-location: bottom
+    link-external-icon: false
+    link-external-newwindow: true
+    reference-location: document
+    preview-links: false
+    overview: true
+    menu: true
+    chalkboard: true
+    mutliplex: false
+    code-fold: show
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-line-numbers: true
+    code-copy: true
+    code-link: false
+    code-annotations: true
+    code-tools:
+      source: "{{ var source }}"
+      toggle: true
+      caption: "Code"
+    highlight-style: monokai
+    date-format: long
+    engine: knitr
+    execute:
+      eval: false
+      echo: true
+    bibliography: references.bib
+    # csl: "apa-6th-edition.csl"
+    language: en
+    copyright: "Lennart Wittkuhn"
+    license: "CC BY"
+    from: "markdown+emoji"
+    search: false
+    metadata-files:
+      - _affiliations.yml
+      - _variables.yml
