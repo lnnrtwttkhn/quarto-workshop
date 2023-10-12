@@ -9,6 +9,9 @@ subtitle: |
   {{< var license-badge >}}
   {{< var doi-badge >}}
 date: today
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ## About
@@ -16,11 +19,18 @@ date: today
 ::: fragment
 ### Me
 
-:scientist: **Position:** Postdoctoral Researcher & Lab Manager at the [Institute of Psychology](https://www.psy.uni-hamburg.de/en.html) at the [University of Hamburg](https://www.psy.uni-hamburg.de/en/arbeitsbereiche/lern-und-veraenderungsmechanismen.html)
+:scientist: **Position:** Postdoctoral Researcher & Lab Manager at the
+[Institute of Psychology](https://www.psy.uni-hamburg.de/en.html) at the
+[University of
+Hamburg](https://www.psy.uni-hamburg.de/en/arbeitsbereiche/lern-und-veraenderungsmechanismen.html)
 
-:mortar_board: **Education:** BSc Psychology & MSc Cognitive Neuroscience (TU Dresden), PhD Cognitive Neuroscience (FU Berlin)
+:mortar_board: **Education:** BSc Psychology & MSc Cognitive
+Neuroscience (TU Dresden), PhD Cognitive Neuroscience (FU Berlin)
 
-:microscope: **Research:** I study the role of fast neural memory reactivation ("[replay](https://en.wikipedia.org/wiki/Hippocampal_replay)") in the human brain using fMRI
+:microscope: **Research:** I study the role of fast neural memory
+reactivation
+("[replay](https://en.wikipedia.org/wiki/Hippocampal_replay)") in the
+human brain using fMRI
 
 :link: **Contact:** You can connect with me via [email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D), [Twitter](%7B%7B%3C%20var%20twitter%20%3E%7D%7D), [Mastodon](%7B%7B%3C%20var%20mastodon%20%3E%7D%7D), [GitHub](%7B%7B%3C%20var%20github%20%3E%7D%7D) or [LinkedIn](%7B%7B%3C%20var%20linkedin%20%3E%7D%7D)
 
@@ -32,7 +42,10 @@ date: today
 
 :computer: **Slides:** Slides are publicly available at [{{< var website >}}](%7B%7B%3C%20var%20website%20%3E%7D%7D)
 
-:package: **Software:** Reproducible slides built with [Quarto](https://quarto.org/) and deployed to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions)
+:package: **Software:** Reproducible slides built with
+[Quarto](https://quarto.org/) and deployed to [GitHub
+Pages](https://pages.github.com/) using [GitHub
+Actions](https://github.com/features/actions)
 
 ```{=html}
 <!-- 
@@ -142,8 +155,31 @@ date: today
 | ```                               |                               |
 +-----------------------------------+-------------------------------+
 
+## Text Formatting
+
++-----------------------------------+----------------------------+
+| Markdown Syntax                   | Output                     |
++===================================+============================+
+| ```                               | *italics* and **bold**     |
+| *italics* and **bold**            |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | superscript^2^ /           |
+| superscript^2^ / subscript~2~     | subscript~2~               |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | ~~strikethrough~~          |
+| ~~strikethrough~~                 |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | `verbatim code`            |
+| `verbatim code`                   |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Headings
@@ -177,7 +213,8 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 +-----------------+----------------+
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Lists
@@ -197,7 +234,8 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 :::
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Lists
@@ -219,7 +257,8 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 :::
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Tables
@@ -249,7 +288,8 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 :::
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Equations
@@ -269,7 +309,8 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 +---------------------------+----------------+
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Blocks
@@ -292,7 +333,8 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 +-------------------------+---------------------+
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Links & Images
@@ -320,7 +362,8 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 +-----------------------------------+--------------------------------------------------------------------------+
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Specials
@@ -345,7 +388,8 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 :::
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
 ## Task 2
@@ -536,7 +580,8 @@ date: today
 
 :computer: **Slides:** Slides are publicly available at [{{< var website >}}](%7B%7B%3C%20var%20website%20%3E%7D%7D)
 
-:package: **Software:** Reproducible slides build with [Quarto](https://quarto.org/) and deployed to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions) (details in the [Quarto docs](https://quarto.org/docs/publishing/github-pages.html))
+{{< fa brands github >}} **Source:** Source code is available at
+[{{< var source >}}](%7B%7B%3C%20var%20source%20%3E%7D%7D)
 
 {{< fa brands github >}} **Source:** Source code is available at [{{< var source >}}](%7B%7B%3C%20var%20source%20%3E%7D%7D)
 
