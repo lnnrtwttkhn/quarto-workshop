@@ -9,167 +9,258 @@ subtitle: |
   {{< var license-badge >}}
   {{< var doi-badge >}}
 date: today
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ## About
 
-::: {.fragment}
-
+::: fragment
 ### Me
 
-:scientist: **Position:** Postdoctoral Researcher & Lab Manager at the [Institute of Psychology](https://www.psy.uni-hamburg.de/en.html) at the [University of Hamburg](https://www.psy.uni-hamburg.de/en/arbeitsbereiche/lern-und-veraenderungsmechanismen.html)
+:scientist: **Position:** Postdoctoral Researcher & Lab Manager at the
+[Institute of Psychology](https://www.psy.uni-hamburg.de/en.html) at the
+[University of
+Hamburg](https://www.psy.uni-hamburg.de/en/arbeitsbereiche/lern-und-veraenderungsmechanismen.html)
 
-:mortar_board: **Education:** BSc Psychology & MSc Cognitive Neuroscience (TU Dresden), PhD Cognitive Neuroscience (FU Berlin)
+:mortar_board: **Education:** BSc Psychology & MSc Cognitive
+Neuroscience (TU Dresden), PhD Cognitive Neuroscience (FU Berlin)
 
-:microscope: **Research:** I study the role of fast neural memory reactivation ("[replay](https://en.wikipedia.org/wiki/Hippocampal_replay)") in the human brain using fMRI
+:microscope: **Research:** I study the role of fast neural memory
+reactivation
+("[replay](https://en.wikipedia.org/wiki/Hippocampal_replay)") in the
+human brain using fMRI
 
-:link: **Contact:** You can connect with me via [email]({{< var mailto >}}), [Twitter]({{< var twitter >}}), [Mastodon]({{< var mastodon >}}),
-[GitHub]({{< var github >}}) or
-[LinkedIn]({{< var linkedin >}})
+:link: **Contact:** You can connect with me via
+[email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D),
+[Twitter](%7B%7B%3C%20var%20twitter%20%3E%7D%7D),
+[Mastodon](%7B%7B%3C%20var%20mastodon%20%3E%7D%7D),
+[GitHub](%7B%7B%3C%20var%20github%20%3E%7D%7D) or
+[LinkedIn](%7B%7B%3C%20var%20linkedin%20%3E%7D%7D)
 
-:information_source: **Info:** Find out more about my work on [my website]({{< var homepage >}}), [Google Scholar]({{< var scholar >}}) and [ORCiD]({{< var orcid-link >}})
-
+:information_source: **Info:** Find out more about my work on [my
+website](%7B%7B%3C%20var%20homepage%20%3E%7D%7D), [Google
+Scholar](%7B%7B%3C%20var%20scholar%20%3E%7D%7D) and
+[ORCiD](%7B%7B%3C%20var%20orcid-link%20%3E%7D%7D)
 :::
 
-::: {.fragment}
-
+::: fragment
 ### This presentation
 
-:computer: **Slides:** Slides are publicly available at [{{< var website >}}]({{< var website >}})
+:computer: **Slides:** Slides are publicly available at
+[{{< var website >}}](%7B%7B%3C%20var%20website%20%3E%7D%7D)
 
-:package: **Software:** Reproducible slides built with [Quarto](https://quarto.org/) and deployed to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions)
+:package: **Software:** Reproducible slides built with
+[Quarto](https://quarto.org/) and deployed to [GitHub
+Pages](https://pages.github.com/) using [GitHub
+Actions](https://github.com/features/actions)
 
+```{=html}
 <!-- 
 :trackball: **DOI:** [10.5281/zenodo.5012476](http://doi.org/10.5281/zenodo.5012476) (generated using GitHub releases + Zenodo, see details [here](https://guides.github.com/activities/citable-code/))
 -->
+```
+{{< fa brands github >}} **Source:** Source code is publicly available
+on GitHub at [{{< var source >}}](%7B%7B%3C%20var%20source%20%3E%7D%7D)
 
-{{< fa brands github >}} **Source:** Source code is publicly available on GitHub at [{{< var source >}}]({{< var source >}})
-
-:pray: **Contact:** I am happy for any feedback or suggestions via [email]({{< var mailto >}}) or [GitHub issues]({{< var issues >}}). Thank you!
-
+:pray: **Contact:** I am happy for any feedback or suggestions via
+[email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D) or [GitHub
+issues](%7B%7B%3C%20var%20issues%20%3E%7D%7D). Thank you!
 :::
 
 ## Agenda
 
-- What is Quarto?
-- Getting started with Quarto
-- Syntax and Document Structure
-- Codeblocks
-- Questions and Answers
+-   What is Quarto?
+-   Getting started with Quarto
+-   Syntax and Document Structure
+-   Codeblocks
+-   Questions and Answers
 
 # What is Quarto?
 
 ## What is Quarto?
 
-Publishing System by Rstudio   
+::: columns
+::: {.column width="50%"}
+::: fragment
+### Publishing System by Rstudio
 
-"An open-source scientific and technical publishing System"
+-   Based on R Markdown
+-   Able to execute code
+-   Supports multiple programming languages
+-   Integrated in Rstudio
+:::
+:::
 
+::: {.column width="50%"}
+::: fragment
 ### Usecases
-- Articles
-- Websites
-- Presentations
-- "Books"
+
+-   Articles
+-   Websites
+-   Presentations
+-   "Books"
+:::
+:::
+:::
+
+::: fragment
+### [Quarto.org:](Quarto.org)
+
+<iframe src="https://quarto.org/docs/gallery/" width="100%" height="500px">
+
+</iframe>
+:::
 
 ## Getting started with Quarto
 
-### What do I need to work with Quarto?
+::: columns
+::: {.column width="50%"}
+::: fragment
+### How can you work with Quarto?
 
-- Rstudio
-
-# Syntax and Document Structure
-
-## Text Formatting {.center}
-
-+-----------------------------------+-------------------------------+
-| Markdown Syntax                   | Output                        |
-+===================================+===============================+
-|     *italics* and **bold**        | *italics* and **bold**        |
-+-----------------------------------+-------------------------------+
-|     superscript^2^ / subscript~2~ | superscript^2^ / subscript~2~ |
-+-----------------------------------+-------------------------------+
-|     ~~strikethrough~~             | ~~strikethrough~~             |
-+-----------------------------------+-------------------------------+
-|     `verbatim code`               | `verbatim code`               |
-+-----------------------------------+-------------------------------+
-
-::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+-   **Rstudio**
+-   Jupyter
+-   Neovim
+-   VS Code
+-   Text editor
+:::
 :::
 
-## Headings {.center}
+::: {.column width="50%"}
+::: fragment
+### Creating Quarto file
 
-+---------------------+-----------------+
-| Markdown Syntax     | Output          |
-+=====================+=================+
-|     # Header 1      | # Header 1      |
-+---------------------+-----------------+
-|     ## Header 2     | ## Header 2     |
-+---------------------+-----------------+
-|     ### Header 3    | ### Header 3    |
-+---------------------+-----------------+
-|     #### Header 4   | #### Header 4   |
-+---------------------+-----------------+
-|     ##### Header 5  | ##### Header 5  |
-+---------------------+-----------------+
-|     ###### Header 6 | ###### Header 6 |
-+---------------------+-----------------+
-
-::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+1.  Open R Studio
+2.  New file -\> Quarto Document
+:::
+:::
 :::
 
-## Lists {.center}
+# Markdown syntax
+
+## Text Formatting
+
++-----------------------------------+----------------------------+
+| Markdown Syntax                   | Output                     |
++===================================+============================+
+| ```                               | *italics* and **bold**     |
+| *italics* and **bold**            |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | superscript^2^ /           |
+| superscript^2^ / subscript~2~     | subscript~2~               |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | ~~strikethrough~~          |
+| ~~strikethrough~~                 |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | `verbatim code`            |
+| `verbatim code`                   |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+
+::: footer
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Headings
+
++------------------+----------------+
+| Markdown Syntax  | Output         |
++==================+================+
+| ```              | # Header 1     |
+| # Header 1       |                |
+| ```              |                |
++------------------+----------------+
+| ```              | ## Header 2    |
+| ## Header 2      |                |
+| ```              |                |
++------------------+----------------+
+| ```              | ### Header 3   |
+| ### Header 3     |                |
+| ```              |                |
++------------------+----------------+
+| ```              | #### Header 4  |
+| #### Header 4    |                |
+| ```              |                |
++------------------+----------------+
+| ```              | ##### Header 5 |
+| ##### Header 5   |                |
+| ```              |                |
++------------------+----------------+
+| ```              | #              |
+| ###### Header 6  |                |
+| ```              | ##### Header 6 |
++------------------+----------------+
+
+::: footer
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Lists
 
 ::: nonincremental
-+------------------------------+----------------------------+
-| Markdown Syntax              | Output                     |
-+==============================+============================+
-|     * unordered list         | -   unordered list         |
-|         + sub-item 1         |                            |
-|         + sub-item 2         |     -   sub-item 1         |
-|             - sub-sub-item 1 |                            |
-|                              |     -   sub-item 2         |
-|                              |                            |
-|                              |         -   sub-sub-item 1 |
-+------------------------------+----------------------------+
++---------------------------+-------------------------+
+| Markdown Syntax           | Output                  |
++===========================+=========================+
+| ```                       | -   unordered list      |
+| * unordered list          |                         |
+|     + sub-item 1          |     -   sub-item 1      |
+|     + sub-item 2          |                         |
+|         - sub-sub-item 1  |     -   sub-item 2      |
+| ```                       |                         |
+|                           |                         |
+|                           |        -   sub-sub-item |
+|                           |             1           |
++---------------------------+-------------------------+
 :::
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
-## Lists {.center}
+## Lists
 
 ::: nonincremental
-+---------------------------------+----------------------------+
-| Markdown Syntax                 | Output                     |
-+=================================+============================+
-|     1. ordered list             | 1.  ordered list           |
-|     2. item 2                   |                            |
-|         i) sub-item 1           | 2.  item 2                 |
-|              A.  sub-sub-item 1 |                            |
-|                                 |     i)  sub-item 1         |
-|                                 |                            |
-|                                 |         A.  sub-sub-item 1 |
-+---------------------------------+----------------------------+
++------------------------------+-------------------------+
+| Markdown Syntax              | Output                  |
++==============================+=========================+
+| ```                          | 1.  ordered list        |
+| 1. ordered list              |                         |
+| 2. item 2                    | 2.  item 2              |
+|     i) sub-item 1            |                         |
+|          A.  sub-sub-item 1  |     i)  sub-item 1      |
+| ```                          |                         |
+|                              |                         |
+|                              |        A.  sub-sub-item |
+|                              |             1           |
++------------------------------+-------------------------+
 :::
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
-## Tables {.center}
+## Tables
 
 ::: columns
 ::: {.column width="50%"}
 #### Markdown Syntax
 
-    | Right | Left | Default | Center |
-    |------:|:-----|---------|:------:|
-    |   12  |  12  |    12   |    12  |
-    |  123  |  123 |   123   |   123  |
-    |    1  |    1 |     1   |     1  |
+```         
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
+```
 :::
 
 ::: {.column width="50%"}
@@ -184,115 +275,259 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 :::
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
-## Equations {.center}
+## Equations
 
-+-------------------------------+----------------+
-| Markdown Syntax               | Output         |
-+===============================+================+
-|     inline math: $E = mc^{2}$ | $E=mc^{2}$     |
-+-------------------------------+----------------+
-|     display math:             | $$E = mc^{2}$$ |
-|                               |                |
-|     $$E = mc^{2}$$            |                |
-+-------------------------------+----------------+
++----------------------------+----------------+
+| Markdown Syntax            | Output         |
++============================+================+
+| ```                        | $E=mc^{2}$     |
+| inline math: $E = mc^{2}$  |                |
+| ```                        |                |
++----------------------------+----------------+
+| ```                        | $$E = mc^{2}$$ |
+| display math:              |                |
+|                            |                |
+| $$E = mc^{2}$$             |                |
+| ```                        |                |
++----------------------------+----------------+
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
-## Blocks {.center}
+## Blocks
 
-+-----------------------------+--------------------------+
-| Markdown Syntax             | Output                   |
-+=============================+==========================+
-|     > Blockquote            | > Blockquote             |
-+-----------------------------+--------------------------+
-|     | Line Block            | | Line Block             |
-|     |   Spaces and newlines | |    Spaces and newlines |
-|     |   are preserved       | |    are preserved       |
-+-----------------------------+--------------------------+
++--------------------------+-----------------------+
+| Markdown Syntax          | Output                |
++==========================+=======================+
+| ```                      | > Blockquote          |
+| > Blockquote             |                       |
+| ```                      |                       |
++--------------------------+-----------------------+
+| ```                      | | Line Block          |
+| | Line Block             | |                     |
+| |   Spaces and newlines  |                       |
+| |   are preserved        | ```                   |
+| ```                      | Spaces and newlines   |
+|                          | ```                   |
+|                          |                       |
+|                          | |    are preserved    |
++--------------------------+-----------------------+
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
-## Links & Images {.center}
+## Links & Images
 
-+--------------------------------------------------------------------+----------------------------------------------------------------+
-| Markdown Syntax                                                    | Output                                                         |
-+====================================================================+================================================================+
-|     <https://oslobrains.no>                                        | <https://oslobrains.no>                                        |
-+--------------------------------------------------------------------+----------------------------------------------------------------+
-|     [LCBC](https://oslobrains.no)                                  | [LCBC](https://oslobrains.no)                                  |
-+--------------------------------------------------------------------+----------------------------------------------------------------+
-|     ![Caption](images/lcbc_logo_wide.png)                          | ![Caption](images/lcbc_logo_wide.png)                          |
-+--------------------------------------------------------------------+----------------------------------------------------------------+
-|     [![Caption](images/lcbc_logo_wide.png)](https://oslobrains.no) | [![Caption](images/lcbc_logo_wide.png)](https://oslobrains.no) |
-+--------------------------------------------------------------------+----------------------------------------------------------------+
++-----------------------------------+-------------------------------+
+| Markdown Syntax                   | Output                        |
++===================================+===============================+
+| ```                               | <https://oslobrains.no>       |
+| <https://oslobrains.no>           |                               |
+| ```                               |                               |
++-----------------------------------+-------------------------------+
+| ```                               | [LCBC](https://oslobrains.no) |
+| [LCBC](https://oslobrains.no)     |                               |
+| ```                               |                               |
++-----------------------------------+-------------------------------+
+| ```                               | ![Capt i                      |
+| ![Ca                              | o                             |
+| ption](images/lcbc_logo_wide.png) | n](images/lcbc_logo_wide.png) |
+| ```                               |                               |
++-----------------------------------+-------------------------------+
+| ```                               | [![Ca                         |
+| [![Caption](images/lcbc_logo_     | ption                         |
+| wide.png)](https://oslobrains.no) | ](images/lcbc_logo_wi%20d%20e |
+| ```                               | .png)](https://oslobrains.no) |
++-----------------------------------+-------------------------------+
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
-## Specials {.center}
+## Specials
 
 ::: nonincremental
-+------------------+----------------+
-| Markdown Syntax  | Output         |
-+==================+================+
-|     endash: --   | endash: --     |
-+------------------+----------------+
-|     emdash: ---  | emdash: ---    |
-+------------------+----------------+
-|     term         | term           |
-|     : definition |                |
-|                  | :   definition |
-+------------------+----------------+
++---------------+---------------+
+| Markdown      | Output        |
+| Syntax        |               |
++===============+===============+
+| ```           | endash: --    |
+| endash: --    |               |
+| ```           |               |
++---------------+---------------+
+| ```           | emdash: ---   |
+| emdash: ---   |               |
+| ```           |               |
++---------------+---------------+
+| ```           | term          |
+| term          |               |
+| : definition  | :             |
+| ```           |    definition |
++---------------+---------------+
 :::
 
 ::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+Source: [RStudio - Markdown
+basics](https://quarto.org/docs/authoring/markdown-basics.html)
 :::
 
-## Codeblocks
+# Code chunks
+## Code chunks
+::: columns
+::: {.column width="50%"}
+::: fragment
+- Quarto files can include pieces of code, which will be executed by
+    rendering the file.
+- This code can be as complicated as you want it to be
+- You can also use *inline code*
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+### Examples
+```{{r}}
+#| label: code-example
+
+cat("Hello, World!\n")
+```
+:::
+::: fragment
+
+```{r echo=FALSE, warning=FALSE}
+cat("Hello, World!\n")
+```
+:::
+::: fragment
+
+```{=html}
+<div class="sourceCode">
+<pre class="sourceCode markdown">
+<code class="sourceCode markdown">
+Number of observations: &#96;r nrow(mtcars)&#96; . 
+</code>
+</pre>
+</div>
+```
+
+:::
+::: fragment
+Number of observations: `r nrow(mtcars)`
+:::
+:::
+:::
+# YAML header
+
+## YAML header
+
+::: columns
+::: {.column width="50%"}
+::: fragment
+-   ***Y**AML **A**in´t **M**arkup **L**anguage*
+-   Sets up document settings using YAML arguments
+-   E.g. title, author, *output format*
+-   Can also be used to set up custom theme for styling
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+### Examples
+
+``` yaml
+---
+title: "Document title"
+author: "Your Name"
+execute:
+  echo: false
+format: pdf
+--- 
+```
+:::
+
+::: fragment
+``` yaml
+---
+title: "{{< var title >}}"
+subtitle: |
+  {{< var subtitle >}}
+  
+  [{{< fa display >}} Slides]({{< var website >}}) |
+  [{{< fa brands github >}} Source]({{< var source >}})
+  
+  {{< var license-badge >}}
+  {{< var doi-badge >}}
+date: today
+---
+```
+:::
+:::
+:::
+
+# References/Citations
+
+## References/Citations
+
+# Output
+
+## Output
 
 ## Questions and Answers
 
 # Thank you! :pray:
 
-:::: {.columns}
+::: columns
 ::: {.column width="35%"}
-
 ![](images/photo_wittkuhn_portrait.jpg)
 
 #### Dr. Lennart Wittkuhn
 
-{{< fa envelope >}} [{{< var email >}}]({{< var mailto >}})<br>
-{{< fa home-user >}} [{{< var homepage >}}]({{< var homepage >}})<br>
-{{< fa brands github >}} [GitHub]({{< var github >}}) 
-{{< fa brands mastodon >}} [Mastodon]({{< var mastodon >}}) 
-{{< fa brands twitter >}} [Twitter]({{< var twitter >}})
+{{< fa envelope >}}
+[{{< var email >}}](%7B%7B%3C%20var%20mailto%20%3E%7D%7D)<br>
+{{< fa home-user >}}
+[{{< var homepage >}}](%7B%7B%3C%20var%20homepage%20%3E%7D%7D)<br>
+{{< fa brands github >}} [GitHub](%7B%7B%3C%20var%20github%20%3E%7D%7D)
+{{< fa brands mastodon >}}
+[Mastodon](%7B%7B%3C%20var%20mastodon%20%3E%7D%7D)
+{{< fa brands twitter >}}
+[Twitter](%7B%7B%3C%20var%20twitter%20%3E%7D%7D)
 :::
 
 ::: {.column width="40%"}
+{{< fa image >}} **Images:** [Scriberia with The Turing Way
+community](https://doi.org/10.5281/zenodo.3332807) (License: [CC BY
+4.0](https://creativecommons.org/licenses/by/4.0/))
 
-{{< fa image >}} **Images:** [Scriberia with The Turing Way community](https://doi.org/10.5281/zenodo.3332807) (License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))
+:computer: **Slides:** Slides are publicly available at
+[{{< var website >}}](%7B%7B%3C%20var%20website%20%3E%7D%7D)
 
-:computer: **Slides:** Slides are publicly available at [{{< var website >}}]({{< var website >}})
+:package: **Software:** Reproducible slides build with
+[Quarto](https://quarto.org/) and deployed to [GitHub
+Pages](https://pages.github.com/) using [GitHub
+Actions](https://github.com/features/actions) (details in the [Quarto
+docs](https://quarto.org/docs/publishing/github-pages.html))
 
-:package: **Software:** Reproducible slides build with [Quarto](https://quarto.org/) and deployed to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions) (details in the [Quarto docs](https://quarto.org/docs/publishing/github-pages.html))
+{{< fa brands github >}} **Source:** Source code is available at
+[{{< var source >}}](%7B%7B%3C%20var%20source%20%3E%7D%7D)
 
-{{< fa brands github >}} **Source:** Source code is available at [{{< var source >}}]({{< var source >}})
-
-:trackball: **DOI:** [10.5281/zenodo.8296951 ](https://zenodo.org/badge/latestdoi/682015737) (generated using GitHub + [Zenodo](https://zenodo.org/), see [GitHub docs](https://guides.github.com/activities/citable-code/))
+:trackball: **DOI:**
+[10.5281/zenodo.8296951](https://zenodo.org/badge/latestdoi/682015737)
+(generated using GitHub + [Zenodo](https://zenodo.org/), see [GitHub
+docs](https://guides.github.com/activities/citable-code/))
 
 {{< fa scale-balanced >}} **License:** {{< var license-long >}}
 
-:speech_balloon: **Contact:** I welcome any feedback via [email]({{< var mailto >}}) or [GitHub issues]({{< var issues >}}).
-Thank you!
+:speech_balloon: **Contact:** I welcome any feedback via
+[email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D) or [GitHub
+issues](%7B%7B%3C%20var%20issues%20%3E%7D%7D). Thank you!
 :::
-
-::::
+:::
