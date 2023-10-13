@@ -76,7 +76,7 @@ human brain using fMRI
 ::: fragment
 ### Usecases
 
--   Articles
+-   Articles/Reports
 -   Websites
 -   Presentations
 -   "Books"
@@ -114,15 +114,12 @@ human brain using fMRI
 1.  Open R Studio
 2.  Install the following R packages:
 
-```{r}
+```{{r}}
 # Run in R
 install.packages(c(
-  "tinytex",       # for pdf rendering
   "rmarkdown",     # rendering everything
   "tidyverse",     # data-wrangling
   "knitr",         # table printing
-  "kableExtra",    # pretty table printing
-  "palmerpenguins" # dataset
 ))
 ```
 
@@ -133,33 +130,12 @@ install.packages(c(
 
 ## Task 1
 
--   Create a Quarto file through R studio
+-   Create a new empty Quarto file called receipes.qmd in R studio
+-   Write a short intro note to your new receipe book
 -   Switch between visual and source mode
 -   Render the file
 
 # Markdown syntax
-
-## Text Formatting
-
-+-------------------------------+-------------------------------+
-| Markdown Syntax               | Output                        |
-+===============================+===============================+
-| ```                           | *italics* and **bold**        |
-| *italics* and **bold**        |                               |
-| ```                           |                               |
-+-------------------------------+-------------------------------+
-| ```                           | superscript^2^ / subscript~2~ |
-| superscript^2^ / subscript~2~ |                               |
-| ```                           |                               |
-+-------------------------------+-------------------------------+
-| ```                           | ~~strikethrough~~             |
-| ~~strikethrough~~             |                               |
-| ```                           |                               |
-+-------------------------------+-------------------------------+
-| ```                           | `verbatim code`               |
-| `verbatim code`               |                               |
-| ```                           |                               |
-+-------------------------------+-------------------------------+
 
 ## Text Formatting
 
@@ -391,7 +367,8 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Task 2
 
--   Try out the Syntax and use at least 3 of the capabilities of quarto.
+-   Copy paste a receipe from the web into your file
+-   Stylize it by appplieng atleast three of the syntaxes
 
 # Code chunks
 
@@ -400,8 +377,10 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
--   Quarto files can include pieces of code, which will be executed by rendering the file.
--   This code can be as complicated as you want it to be
+-   Quarto files can include pieces of code, which will be executed by rendering the file
+-   Code chunks can be interactive
+-   You can specify various options for code chunks
+-   The code can be as complicated as you want it to be
 -   You can also use *inline code*
 :::
 :::
@@ -412,7 +391,8 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ##### Input
 
-```{{r}}
+```
+{r}
 #| label: code-example
 
 x <- c(1, 2, 3, 4, 5)
@@ -431,21 +411,29 @@ y <- c(2, 4, 1, 3, 5)
 plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
 ```
 :::
+:::
+:::
 
+## Code chunks
+### Inline code
+::: columns
+::: {.column width="50%"}
 ::: fragment
-##### Input
+### Input
 
-`` Number of observations: ` r nrow(mtcars)` ``
+```
+Number of observations: ` r 8*2020` 
+```
 :::
-
+:::
+::: {.column width="50%"}
 ::: fragment
-##### Output
+### Output
 
-Number of observations: `r nrow(mtcars)`
+Number of observations: `r 8*2020`
 :::
 :::
 :::
-
 ## Task 3:
 
 -   Include a plot in your quarto file and render it.
@@ -498,9 +486,14 @@ date: today
 :::
 :::
 
+::: footer
+Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
+:::
+
 ## Task 4:
 
 -   Add a YAML header to your file
+-   Include your name, a title and an output format
 
 # References/Citations
 
@@ -517,6 +510,10 @@ date: today
 | Sections     | sec-         |
 | Code listing | lst-         |
 | Theorem      | thm-         |
+
+::: footer
+Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
+:::
 
 ## Citations {#sec-citations}
 
@@ -549,6 +546,10 @@ date: today
 | @biswal2010 says bloop.                      |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
+
+::: footer
+Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
+:::
 
 ## Citations
 
