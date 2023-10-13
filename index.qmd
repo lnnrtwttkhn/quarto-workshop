@@ -52,8 +52,10 @@ human brain using fMRI
 
 -   What is Quarto?
 -   Getting started with Quarto
--   Syntax and Document Structure
--   Codeblocks
+-   Syntax
+-   Code chunks
+-   YAML header
+-   References/Citations
 -   Questions and Answers
 
 # What is Quarto?
@@ -109,10 +111,11 @@ human brain using fMRI
 
 ::: {.column width="50%"}
 ::: fragment
-### Creating Quarto file
+### Creating a Quarto file
 
-1.  Open R Studio
-2.  Install the following R packages:
+1. ([Download Quarto](https://quarto.org/docs/get-started/))
+2.  Open R Studio
+3.  (Install the following R packages:)
 
 ```{{r}}
 # Run in R
@@ -123,17 +126,24 @@ install.packages(c(
 ))
 ```
 
-3.  Create a new .qmd file through: New file -\> Quarto Document
+4.  Create a new .qmd file through: New file -\> Quarto Document
 :::
 :::
 :::
 
+## Output formats
+- HTML (Standard)
+- PDF (requires a LaTeX installation)
+### Presentations
+- reveal.js (HTML)
+- pptx (Powerpoint)
 ## Task 1
 
 -   Create a new empty Quarto file called receipes.qmd in R studio
 -   Write a short intro note to your new receipe book
 -   Switch between visual and source mode
 -   Render the file
+
 
 # Markdown syntax
 
@@ -368,7 +378,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ## Task 2
 
 -   Copy paste a receipe from the web into your file
--   Stylize it by appplieng atleast three of the syntaxes
+-   Stylize it by appplying atleast three of the syntaxes
 
 # Code chunks
 
@@ -568,6 +578,10 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
     note = {License: The process documents and data are made available under a \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0 license}. Software are made available under an \href{https://opensource.org/license/mit/}{MIT license}. Website: \url{https://the-turing-way.netlify.app/}}
 }
 ```
+
+## Quarto extensions
+- [fontawesome](https://github.com/quarto-ext/fontawesome)
+- [More extensions](https://quarto.org/docs/extensions/listing-filters.html)
 
 ## Questions and Answers
 
