@@ -13,11 +13,18 @@ date: today
 
 ### Me
 
-:scientist: **Position:** Postdoctoral Researcher & Lab Manager at the [Institute of Psychology](https://www.psy.uni-hamburg.de/en.html) at the [University of Hamburg](https://www.psy.uni-hamburg.de/en/arbeitsbereiche/lern-und-veraenderungsmechanismen.html)
+:scientist: **Position:** Postdoctoral Researcher & Lab Manager at the
+[Institute of Psychology](https://www.psy.uni-hamburg.de/en.html) at the
+[University of
+Hamburg](https://www.psy.uni-hamburg.de/en/arbeitsbereiche/lern-und-veraenderungsmechanismen.html)
 
-:mortar_board: **Education:** BSc Psychology & MSc Cognitive Neuroscience (TU Dresden), PhD Cognitive Neuroscience (FU Berlin)
+:mortar_board: **Education:** BSc Psychology & MSc Cognitive
+Neuroscience (TU Dresden), PhD Cognitive Neuroscience (FU Berlin)
 
-:microscope: **Research:** I study the role of fast neural memory reactivation ("[replay](https://en.wikipedia.org/wiki/Hippocampal_replay)") in the human brain using fMRI
+:microscope: **Research:** I study the role of fast neural memory
+reactivation
+("[replay](https://en.wikipedia.org/wiki/Hippocampal_replay)") in the
+human brain using fMRI
 
 :link: **Contact:** You can connect with me via [email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D), [Twitter](%7B%7B%3C%20var%20twitter%20%3E%7D%7D), [Mastodon](%7B%7B%3C%20var%20mastodon%20%3E%7D%7D), [GitHub](%7B%7B%3C%20var%20github%20%3E%7D%7D) or [LinkedIn](%7B%7B%3C%20var%20linkedin%20%3E%7D%7D)
 
@@ -153,6 +160,28 @@ install.packages(c(
 | `verbatim code`               |                               |
 | ```                           |                               |
 +-------------------------------+-------------------------------+
+
+## Text Formatting
+
++-----------------------------------+----------------------------+
+| Markdown Syntax                   | Output                     |
++===================================+============================+
+| ```                               | *italics* and **bold**     |
+| *italics* and **bold**            |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | superscript^2^ /           |
+| superscript^2^ / subscript~2~     | subscript~2~               |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | ~~strikethrough~~          |
+| ~~strikethrough~~                 |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
+| ```                               | `verbatim code`            |
+| `verbatim code`                   |                            |
+| ```                               |                            |
++-----------------------------------+----------------------------+
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartiki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
