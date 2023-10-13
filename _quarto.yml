@@ -66,7 +66,7 @@ format:
     date-format: long
     engine: knitr
     execute:
-      eval: false
+      eval: true
       echo: true
     bibliography: references.bib
     # csl: "apa-6th-edition.csl"
