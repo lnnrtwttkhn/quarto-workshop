@@ -149,6 +149,7 @@ install.packages(c(
 -   Switch between visual and source mode
 -   Render the file
 
+
 # Markdown syntax
 
 ## Markdown {{< fa markdown >}}
