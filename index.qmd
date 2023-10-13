@@ -13,23 +13,15 @@ date: today
 
 ### Me
 
-:scientist: **Position:** Postdoctoral Researcher & Lab Manager at the
-[Institute of Psychology](https://www.psy.uni-hamburg.de/en.html) at the
-[University of
-Hamburg](https://www.psy.uni-hamburg.de/en/arbeitsbereiche/lern-und-veraenderungsmechanismen.html)
+:scientist: **Position:** Postdoctoral Researcher & Lab Manager at the [Institute of Psychology](https://www.psy.uni-hamburg.de/en.html) at the [University of Hamburg](https://www.psy.uni-hamburg.de/en/arbeitsbereiche/lern-und-veraenderungsmechanismen.html)
 
-:mortar_board: **Education:** BSc Psychology & MSc Cognitive
-Neuroscience (TU Dresden), PhD Cognitive Neuroscience (FU Berlin)
+:mortar_board: **Education:** BSc Psychology & MSc Cognitive Neuroscience (TU Dresden), PhD Cognitive Neuroscience (FU Berlin)
 
-:microscope: **Research:** I study the role of fast neural memory
-reactivation
-("[replay](https://en.wikipedia.org/wiki/Hippocampal_replay)") in the
-human brain using fMRI
+:microscope: **Research:** I study the role of fast neural memory reactivation ("[replay](https://en.wikipedia.org/wiki/Hippocampal_replay)") in the human brain using fMRI
 
 :link: **Contact:** You can connect with me via [email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D), [Twitter](%7B%7B%3C%20var%20twitter%20%3E%7D%7D), [Mastodon](%7B%7B%3C%20var%20mastodon%20%3E%7D%7D), [GitHub](%7B%7B%3C%20var%20github%20%3E%7D%7D) or [LinkedIn](%7B%7B%3C%20var%20linkedin%20%3E%7D%7D)
 
-:information_source: **Info:** Find out more about my work on [my website](%7B%7B%3C%20var%20homepage%20%3E%7D%7D), [Google Scholar](%7B%7B%3C%20var%20scholar%20%3E%7D%7D) and [ORCiD](%7B%7B%3C%20var%20orcid-link%20%3E%7D%7D)
-:::
+:information_source: **Info:** Find out more about my work on [my website](%7B%7B%3C%20var%20homepage%20%3E%7D%7D), [Google Scholar](%7B%7B%3C%20var%20scholar%20%3E%7D%7D) and [ORCiD](%7B%7B%3C%20var%20orcid-link%20%3E%7D%7D) :::
 
 ::: fragment
 ### This presentation
@@ -52,8 +44,10 @@ human brain using fMRI
 
 -   What is Quarto?
 -   Getting started with Quarto
--   Syntax and Document Structure
--   Codeblocks
+-   Markdown syntax
+-   Code chunks
+-   YAML header
+-   References/Citations
 -   Questions and Answers
 
 # What is Quarto?
@@ -92,6 +86,18 @@ human brain using fMRI
 </iframe>
 :::
 
+## Usescases for you/scientists {{< fa flask >}}
+
+-   Reproducible research
+-   Data analysis/visualisation
+-   Dynamic documents
+-   Presentation slides
+-   Automated reports
+
+::: fragment
+### Open science {{< fa champagne-glasses >}}{style="text-align: center;"}
+:::
+
 ## Getting started with Quarto
 
 ::: columns
@@ -109,10 +115,11 @@ human brain using fMRI
 
 ::: {.column width="50%"}
 ::: fragment
-### Creating Quarto file
+### Creating a Quarto file
 
-1.  Open R Studio
-2.  Install the following R packages:
+1.  ([Download Quarto](https://quarto.org/docs/get-started/))
+2.  Open R Studio
+3.  (Install the following R packages:)
 
 ```{{r}}
 # Run in R
@@ -123,10 +130,17 @@ install.packages(c(
 ))
 ```
 
-3.  Create a new .qmd file through: New file -\> Quarto Document
+4.  Create a new .qmd file through: New file -\> Quarto Document
 :::
 :::
 :::
+
+## Output formats
+
+-   HTML (Standard)
+-   PDF (requires a LaTeX installation) \### Presentations
+-   reveal.js (HTML)
+-   pptx (Powerpoint)
 
 ## Task 1
 
@@ -137,27 +151,33 @@ install.packages(c(
 
 # Markdown syntax
 
+## Markdown {{< fa markdown >}}
+
+-   Easy to use text editor language
+-   Low learning curve
+-   Integrated in R studio as R markdown
+
 ## Text Formatting
 
-+-----------------------------------+----------------------------+
-| Markdown Syntax                   | Output                     |
-+===================================+============================+
-| ```                               | *italics* and **bold**     |
-| *italics* and **bold**            |                            |
-| ```                               |                            |
-+-----------------------------------+----------------------------+
-| ```                               | superscript^2^ /           |
-| superscript^2^ / subscript~2~     | subscript~2~               |
-| ```                               |                            |
-+-----------------------------------+----------------------------+
-| ```                               | ~~strikethrough~~          |
-| ~~strikethrough~~                 |                            |
-| ```                               |                            |
-+-----------------------------------+----------------------------+
-| ```                               | `verbatim code`            |
-| `verbatim code`                   |                            |
-| ```                               |                            |
-+-----------------------------------+----------------------------+
++--------------------------------+-------------------------------+
+| Markdown Syntax                | Output                        |
++================================+===============================+
+| ```                            | *italics* and **bold**        |
+| *italics* and **bold**         |                               |
+| ```                            |                               |
++--------------------------------+-------------------------------+
+| ```                            | superscript^2^ / subscript~2~ |
+| superscript^2^ / subscript~2~  |                               |
+| ```                            |                               |
++--------------------------------+-------------------------------+
+| ```                            | ~~strikethrough~~             |
+| ~~strikethrough~~              |                               |
+| ```                            |                               |
++--------------------------------+-------------------------------+
+| ```                            | `verbatim code`               |
+| `verbatim code`                |                               |
+| ```                            |                               |
++--------------------------------+-------------------------------+
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartiki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
@@ -368,7 +388,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ## Task 2
 
 -   Copy paste a receipe from the web into your file
--   Stylize it by appplieng atleast three of the syntaxes
+-   Stylize it by appplying atleast three of the syntaxes
 
 # Code chunks
 
@@ -391,8 +411,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ##### Input
 
-```
-{r}
+```{r}
 #| label: code-example
 
 x <- c(1, 2, 3, 4, 5)
@@ -404,8 +423,7 @@ plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
 ::: fragment
 ##### Output
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
-#| label: code-example
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=TRUE}
 x <- c(1, 2, 3, 4, 5)
 y <- c(2, 4, 1, 3, 5)
 plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
@@ -415,17 +433,20 @@ plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
 :::
 
 ## Code chunks
+
 ### Inline code
+
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
 ### Input
 
-```
+```         
 Number of observations: ` r 8*2020` 
 ```
 :::
 :::
+
 ::: {.column width="50%"}
 ::: fragment
 ### Output
@@ -434,6 +455,7 @@ Number of observations: `r 8*2020`
 :::
 :::
 :::
+
 ## Task 3:
 
 -   Include a plot in your quarto file and render it.
@@ -568,6 +590,12 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
     note = {License: The process documents and data are made available under a \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0 license}. Software are made available under an \href{https://opensource.org/license/mit/}{MIT license}. Website: \url{https://the-turing-way.netlify.app/}}
 }
 ```
+## Templates
+
+## Quarto extensions
+
+-   [fontawesome](https://github.com/quarto-ext/fontawesome)
+-   [More extensions](https://quarto.org/docs/extensions/listing-filters.html)
 
 ## Questions and Answers
 
