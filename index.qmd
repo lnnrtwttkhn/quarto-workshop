@@ -48,9 +48,38 @@ date: today
 -   Code chunks
 -   YAML header
 -   References/Citations
+-   Git integration
 -   Questions and Answers
 
 # What is Quarto?
+
+## Markdown {{< fa brands-markdown >}}
+
+::: columns
+::: {.column width="50%"}
+::: fragment
+
+-   Easy to use text editor language
+-   Low learning curve
+-   Integrated in R studio as R Markdown
+-   `.md` files easily trackable with Git
+-  Can be an **alternative to using `.docx` files**
+-  Used by text editors, GitHub, message tools...
+
+:::
+:::
+::: {.column width="50%"}
+::: fragment
+
+### [HedgeDoc:](https://hedgedoc.org)
+
+<iframe src="https://pad.uni-hamburg.de/C6Dn13dLQ8OEe7g8RB7JCQ?both" width="100%" height="500px">
+
+</iframe>
+
+:::
+:::
+:::
 
 ## What is Quarto?
 
@@ -59,13 +88,12 @@ date: today
 ::: fragment
 ### Publishing System by Rstudio
 
--   Based on R Markdown
+-   Based on R Markdown (= R Markdown with even more even features)
 -   Able to execute code
 -   Supports multiple programming languages
 -   Integrated in Rstudio
 :::
 :::
-
 ::: {.column width="50%"}
 ::: fragment
 ### Usecases
@@ -79,14 +107,14 @@ date: today
 :::
 
 ::: fragment
-### [Quarto.org:](Quarto.org)
+### [Quarto.org:](http://quarto.org)
 
 <iframe src="https://quarto.org/docs/gallery/" width="100%" height="500px">
 
 </iframe>
 :::
 
-## Usescases for you/scientists {{< fa flask >}}
+## Usescases for you/scientists
 
 -   Reproducible research
 -   Data analysis/visualisation
@@ -95,7 +123,7 @@ date: today
 -   Automated reports
 
 ::: fragment
-### Open science {{< fa champagne-glasses >}}{style="text-align: center;"}
+### Open science! {style="text-align: center;"}
 :::
 
 ## Getting started with Quarto
@@ -117,68 +145,68 @@ date: today
 ::: fragment
 ### Creating a Quarto file
 
-1.  ([Download Quarto](https://quarto.org/docs/get-started/))
+1.  Download and Install [the newest version of Rstudio](https://posit.co/download/rstudio-desktop/))
 2.  Open R Studio
-3.  (Install the following R packages:)
-
-```{{r}}
-# Run in R
-install.packages(c(
-  "rmarkdown",     # rendering everything
-  "tidyverse",     # data-wrangling
-  "knitr",         # table printing
-))
-```
-
-4.  Create a new .qmd file through: New file -\> Quarto Document
+3.  Create a new .qmd file through: New file -> Quarto Document
 :::
 :::
 :::
 
-## Output formats
+## Rendering `.qmd` files
+::: columns
+::: {.column width="50%"}
+::: fragment
+
+### Output formats
 
 -   HTML (Standard)
--   PDF (requires a LaTeX installation) \### Presentations
+-   PDF (requires a LaTeX installation)
+
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+
+### Presentations
+
 -   reveal.js (HTML)
 -   pptx (Powerpoint)
 
+:::
+:::
+:::
+
 ## Task 1
 
--   Create a new empty Quarto file called receipes.qmd in R studio
--   Write a short intro note to your new receipe book
+-   Create a new empty Quarto file called recipes.qmd in R studio
+-   Write a short intro note to your new recipe book
 -   Switch between visual and source mode
 -   Render the file
 
-
 # Markdown syntax
-
-## Markdown {{< fa markdown >}}
-
--   Easy to use text editor language
--   Low learning curve
--   Integrated in R studio as R markdown
 
 ## Text Formatting
 
-+--------------------------------+-------------------------------+
-| Markdown Syntax                | Output                        |
-+================================+===============================+
-| ```                            | *italics* and **bold**        |
-| *italics* and **bold**         |                               |
-| ```                            |                               |
-+--------------------------------+-------------------------------+
-| ```                            | superscript^2^ / subscript~2~ |
-| superscript^2^ / subscript~2~  |                               |
-| ```                            |                               |
-+--------------------------------+-------------------------------+
-| ```                            | ~~strikethrough~~             |
-| ~~strikethrough~~              |                               |
-| ```                            |                               |
-+--------------------------------+-------------------------------+
-| ```                            | `verbatim code`               |
-| `verbatim code`                |                               |
-| ```                            |                               |
-+--------------------------------+-------------------------------+
++-------------------------------+-------------------------------+
+| Markdown Syntax               | Output                        |
++===============================+===============================+
+| ```                           | *italics* and **bold**        |
+| *italics* and **bold**        |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | superscript^2^ / subscript~2~ |
+| superscript^2^ / subscript~2~ |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | ~~strikethrough~~             |
+| ~~strikethrough~~             |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | `verbatim code`               |
+| `verbatim code`               |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartiki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
@@ -412,7 +440,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ##### Input
 
-```{r}
+```{r output=FALSE}
 #| label: code-example
 
 x <- c(1, 2, 3, 4, 5)
@@ -424,7 +452,7 @@ plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
 ::: fragment
 ##### Output
 
-```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=TRUE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 x <- c(1, 2, 3, 4, 5)
 y <- c(2, 4, 1, 3, 5)
 plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
@@ -459,7 +487,8 @@ Number of observations: `r 8*2020`
 
 ## Task 3:
 
--   Include a plot in your quarto file and render it.
+-  Use inline code to display a mathmatical operation in your file
+
 
 # YAML header
 
@@ -518,7 +547,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 -   Add a YAML header to your file
 -   Include your name, a title and an output format
 
-# References/Citations
+# Extra features
 
 ## Referencing
 
@@ -574,33 +603,24 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-## Citations
-
--   .bib file in your project
-
-```         
-@book{community2022,
-    title = {The Turing Way: A handbook for reproducible, ethical and collaborative research},
-    author = {{The Turing Way Community}},
-    year = {2022},
-    month = {07},
-    date = {2022-07-27},
-    publisher = {Zenodo},
-    doi = {10.5281/zenodo.3233853},
-    url = {https://zenodo.org/record/3233853},
-    note = {License: The process documents and data are made available under a \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0 license}. Software are made available under an \href{https://opensource.org/license/mit/}{MIT license}. Website: \url{https://the-turing-way.netlify.app/}}
-}
-```
-## Templates
-
 ## Quarto extensions
 
 -   [fontawesome](https://github.com/quarto-ext/fontawesome)
 -   [More extensions](https://quarto.org/docs/extensions/listing-filters.html)
 
-## Questions and Answers
 
-# Thank you! :pray:
+## Using Git with `.qmd` files
+
+### Features
+- Plain textfiles so e.g. `git diff` works perfect!
+- Rstudio also has GUI integration of Git
+
+### `.gitignore file`
+
+- Should include rendered files like `.pdf`
+- When using Rstudio also files like `.Rproj` or `.RData`
+
+## Questions and Answers
 
 ::: columns
 ::: {.column width="35%"}
