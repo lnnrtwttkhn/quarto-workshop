@@ -65,6 +65,7 @@ date: today
 -   `.md` files easily trackable with Git
 -  Can be an **alternative to using `.docx` files**
 -  Used by text editors, GitHub, message tools...
+-  Content and formatting are integrated instead of seperated
 
 :::
 :::
