@@ -42,16 +42,14 @@ date: today
 
 ## Agenda
 
--   What is Quarto?
--   Getting started with Quarto
--   Markdown syntax
--   Code chunks
--   YAML header
--   References/Citations
+-   Introduction to Quarto
+-   Markdown Basics
+-   Quarto in action
 -   Git integration
+-   Additional Resources
 -   Questions and Answers
 
-# What is Quarto?
+# Introduction to Quarto
 
 ## Markdown {{< fa brands-markdown >}}
 
@@ -64,7 +62,7 @@ date: today
 -   Integrated in R studio as R Markdown
 -   `.md` files easily trackable with Git
 -  Can be an **alternative to using `.docx` files**
--  Used by text editors, GitHub, message tools...
+-  Used by text editors, GitHub (README), message tools...
 -  Content and formatting are integrated instead of seperated
 
 :::
@@ -72,7 +70,7 @@ date: today
 ::: {.column width="50%"}
 ::: fragment
 
-### [HedgeDoc:](https://hedgedoc.org)
+### E.g.: [HedgeDoc:](https://hedgedoc.org)
 
 <iframe src="https://pad.uni-hamburg.de/C6Dn13dLQ8OEe7g8RB7JCQ?both" width="100%" height="500px">
 
@@ -107,25 +105,6 @@ date: today
 :::
 :::
 
-::: fragment
-### [Quarto.org:](http://quarto.org)
-
-<iframe src="https://quarto.org/docs/gallery/" width="100%" height="500px">
-
-</iframe>
-:::
-
-## Usescases for you/scientists
-
--   Reproducible research
--   Data analysis/visualisation
--   Dynamic documents
--   Presentation slides
--   Automated reports
-
-::: fragment
-### Open science! {style="text-align: center;"}
-:::
 
 ## Getting started with Quarto
 
@@ -146,7 +125,7 @@ date: today
 ::: fragment
 ### Creating a Quarto file
 
-1.  Download and Install [the newest version of Rstudio](https://posit.co/download/rstudio-desktop/))
+1.  Download and Install [the newest version of Rstudio](https://posit.co/download/rstudio-desktop/)
 2.  Open R Studio
 3.  Create a new .qmd file through: New file -> Quarto Document
 :::
@@ -160,7 +139,7 @@ date: today
 
 ### Output formats
 
--   HTML (Standard)
+-   **HTML (Standard)**
 -   PDF (requires a LaTeX installation)
 
 :::
@@ -185,7 +164,7 @@ date: today
 -   Switch between visual and source mode
 -   Render the file
 
-# Markdown syntax
+# Markdown basics
 
 ## Text Formatting
 
@@ -432,6 +411,8 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 -   You can specify various options for code chunks
 -   The code can be as complicated as you want it to be
 -   You can also use *inline code*
+-   R code enclosed by ```` ```{r} code  ``` ````
+
 :::
 :::
 
@@ -488,10 +469,7 @@ Number of observations: `r 8*2020`
 
 ## Task 3:
 
--  Use inline code to display a mathmatical operation in your file
-
-
-# YAML header
+-  Use (inline) code to display a mathmatical operation in your file
 
 ## YAML header
 
@@ -604,11 +582,29 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-## Quarto extensions
+#  Quarto in action
 
--   [fontawesome](https://github.com/quarto-ext/fontawesome)
--   [More extensions](https://quarto.org/docs/extensions/listing-filters.html)
+## Usescases for researchers
 
+-   Reproducible research
+-   Data analysis/visualisation
+-   Dynamic documents
+-   Presentation slides
+-   Automated reports
+
+::: fragment
+### Publishing reproducible papers {style="text-align: center;"}
+:::
+
+::: fragment
+### Open science! {style="text-align: center;"}
+:::
+
+## Cool Example
+
+-> Lennart Wittkunhns paper published with Quarto
+
+# Git integration
 
 ## Using Git with `.qmd` files
 
@@ -620,6 +616,21 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 - Should include rendered files like `.pdf`
 - When using Rstudio also files like `.Rproj` or `.RData`
+
+## GitHub actions
+
+::: fragment
+### Automated document generation {style="text-align: center;"}
+:::
+
+
+## Additional Ressources
+
+- [Official Quarto Documentation](https://quarto.org)
+
+- [Quartaki](https://drmowinckels.io/quartaki/) by Dr. Mowinckel
+
+- [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) (Ressource Collection)
 
 ## Questions and Answers
 
