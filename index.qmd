@@ -57,7 +57,7 @@ date: today
 ::: {.column width="50%"}
 ::: fragment
 -   Easy to use
--   "WYSIWYG" editor
+-   "Markup" Language
 -   Content and formatting are integrated instead of seperated
 -   Can be an **alternative to using `.docx` files**
 -   Used by text editors, GitHub (README), message tools...
@@ -67,7 +67,7 @@ date: today
 
 ::: {.column width="50%"}
 ::: fragment
-### E.g.: [HedgeDoc:](https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w)
+### E.g.: [HedgeDoc:](https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w?both)
 
 <iframe src="https://hedgedoc.org" width="100%" height="500px">
 
@@ -75,6 +75,19 @@ date: today
 :::
 :::
 :::
+
+::: {.notes}
+
+Markup Language. = text encoding system readable by machine
+Pros: easier to use for quick notes, faster to write since format and content intertwined, and version control, faster - less loading 
+cons: less formatting options since its intentionally simple, e.g. tables pretty complex to do, or pictures  less intuitive (once used to word)
+
+Used by: GitHub, Slack Discord, Reddit 
+Hedgedoc = open source markdown editor 
+Formerly knows as CodiMD 
+
+R markdown = designed to be used with R from Rstudio , integration of R code, create documents which include code, widely used in scientific community 
+::: 
 
 ## What is Quarto?
 
@@ -100,6 +113,13 @@ date: today
 -   ["Books"](https://lennartwittkuhn.com/version-control-book/)
 :::
 :::
+:::
+
+::: {.notes}
+2. Very new (2022)
+Created by rstudio´s  creators - like r markdown but for even more features
+E.g. Python code, Javascript, languages that dont even exist yet
+able to render markdown files
 :::
 
 ## Getting started with Quarto
@@ -152,10 +172,10 @@ date: today
 
 ## Task 1
 
--   Create a new empty Quarto file called recipes.qmd in R studio
--   Write a short intro note to your new recipe book
+-   Create a new **empty Quarto file** called recipes.qmd in R studio
+-   Write a **short intro note** to your new recipe book
 -   Switch between visual and source mode
--   Render the file
+-   Render the file as HTML file
 
 # Markdown basics
 
@@ -365,7 +385,68 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ## Task 2
 
 -   Copy paste a receipe from the web into your file
--   Stylize it by appplying atleast three of the syntaxes
+-   Stylize it by appplying at least three of the syntaxes
+
+# YAML header
+
+## YAML
+
+::: columns
+::: {.column width="50%"}
+::: fragment
+-   ***Y**AML **A**in´t **M**arkup **L**anguage*
+-   **Document Settings:** YAML sets up document settings like *title*, *author*, and *output format*.
+-   **Customization:** Use YAML for custom themes and styling.
+-   [**Themes:**](https://quarto.org/docs/output-formats/html-themes.html) E.g. default, morph or pulse
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+### Examples
+
+``` yaml
+---
+title: "Document title"
+author: "Your Name"
+theme: vapor
+format: pdf
+--- 
+```
+:::
+
+::: fragment
+``` yaml
+---
+title: "{{< var title >}}"
+subtitle: |
+  {{< var subtitle >}}
+  
+  [{{< fa display >}} Slides]({{< var website >}}) |
+  [{{< fa brands github >}} Source]({{< var source >}})
+  
+  {{< var license-badge >}}
+  {{< var doi-badge >}}
+theme: default
+date: today
+---
+```
+:::
+:::
+:::
+
+::: {.notes}
+YAML: Datenformat in konfiguartionsdateien, noch viele andere Anwendungsmöglichkeiten,  Metadata for files, today only author, title and output format and Theme
+:::
+
+::: footer
+Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
+:::
+
+## Task 3:
+
+-   Add a YAML header to your file
+-   Include **your name**, **a title** an **output format (HTML)** and **a theme**.
 
 # Code chunks
 
@@ -436,63 +517,9 @@ Number of observations: `r 8*2020`
 :::
 :::
 
-## Task 3:
-
--   Use (inline) code to display a mathmatical operation in your file
-
-## YAML header
-
-::: columns
-::: {.column width="50%"}
-::: fragment
--   ***Y**AML **A**in´t **M**arkup **L**anguage*
--   **Document Settings:** YAML sets up document settings like *title*, *author*, and *output format*.
--   **Customization:** Use YAML for custom themes and styling.
+::: {.notes}
+Code: you dont have to use it for a recipe book but its possible
 :::
-:::
-
-::: {.column width="50%"}
-::: fragment
-### Examples
-
-``` yaml
----
-title: "Document title"
-author: "Your Name"
-execute:
-  echo: false
-format: pdf
---- 
-```
-:::
-
-::: fragment
-``` yaml
----
-title: "{{< var title >}}"
-subtitle: |
-  {{< var subtitle >}}
-  
-  [{{< fa display >}} Slides]({{< var website >}}) |
-  [{{< fa brands github >}} Source]({{< var source >}})
-  
-  {{< var license-badge >}}
-  {{< var doi-badge >}}
-date: today
----
-```
-:::
-:::
-:::
-
-::: footer
-Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
-:::
-
-## Task 4:
-
--   Add a YAML header to your file
--   Include your name, a title and an output format
 
 # Extra features
 
