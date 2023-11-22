@@ -362,31 +362,6 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-## Specials
-
-::: nonincremental
-+-----------------+----------------+
-| Markdown Syntax | Output         |
-+=================+================+
-| ```             | endash: --     |
-| endash: --      |                |
-| ```             |                |
-+-----------------+----------------+
-| ```             | emdash: ---    |
-| emdash: ---     |                |
-| ```             |                |
-+-----------------+----------------+
-| ```             | term           |
-| term            |                |
-| : definition    | :   definition |
-| ```             |                |
-+-----------------+----------------+
-:::
-
-::: footer
-Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
-:::
-
 ## Task 2
 
 -   Copy paste a receipe from the web into your file
@@ -399,10 +374,10 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
--   Quarto files can include pieces of code, which will be executed by rendering the file
+-   **Executable Code:** Quarto files support code execution during rendering.
 -   Code chunks can be interactive
--   You can specify various options for code chunks
--   The code can be as complicated as you want it to be
+-   **Customizable Options:** Specify various options for code chunks
+-   **Complex Code Supported:** Handle as complex code as needed
 -   You can also use *inline code*
 -   R code enclosed by ```` ```{r} code  ``` ````
 :::
@@ -414,6 +389,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ##### Input
 
+
 ```{r output=FALSE}
 #| label: code-example
 
@@ -421,6 +397,7 @@ x <- c(1, 2, 3, 4, 5)
 y <- c(2, 4, 1, 3, 5)
 plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
 ```
+
 :::
 
 ::: fragment
@@ -469,9 +446,8 @@ Number of observations: `r 8*2020`
 ::: {.column width="50%"}
 ::: fragment
 -   ***Y**AML **A**in´t **M**arkup **L**anguage*
--   Sets up document settings using YAML arguments
--   E.g. title, author, *output format*
--   Can also be used to set up custom theme for styling
+-   **Document Settings:** YAML sets up document settings like *title*, *author*, and *output format*.
+-   **Customization:** Use YAML for custom themes and styling.
 :::
 :::
 
@@ -605,10 +581,6 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 -   Plain textfiles so e.g. `git diff` works perfect!
 -   Rstudio also has GUI integration of Git
 
-### `.gitignore file`
-
--   Should include rendered files like `.pdf`
--   When using Rstudio also files like `.Rproj` or `.RData`
 
 ## GitHub actions
 
