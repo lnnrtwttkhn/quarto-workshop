@@ -437,6 +437,7 @@ date: today
 
 ::: {.notes}
 YAML: Datenformat in konfiguartionsdateien, noch viele andere Anwendungsmöglichkeiten,  Metadata for files, today only author, title and output format and Theme
+Could also do e.g. date_: 
 :::
 
 ::: footer
@@ -614,9 +615,10 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 - **Trigger Events:** Specify events, such as pushes or pull requests, to trigger document generation automatically.
 
+- Can allow you to easily update website built with Quarto (hosted with GitHub pages)
 
 ## Additional Ressources
-
+11
 -   [Official Quarto Documentation](https://quarto.org)
 
 -   [Quartaki](https://drmowinckels.io/quartaki/) by Dr. Mowinckel
