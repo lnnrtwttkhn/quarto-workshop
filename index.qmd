@@ -568,25 +568,25 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ### Open science! {style="text-align: center;"}
 :::
 
-## Cool Example
-
--\> Lennart Wittkunhns paper published with Quarto
-
 # Git integration
 
 ## Using Git with `.qmd` files
 
 ### Features
 
--   Plain textfiles so e.g. `git diff` works perfect!
--   Rstudio also has GUI integration of Git
+-   **Plain Text Files:** `.qmd` files are plain text, ensuring compatibility with git diff for effective version control.
 
+- **Branching and Merging:** Use Git's branching and merging capabilities to manage complex document edits.
+
+- **Conflict Resolution:** Resolve conflicts efficiently when collaborating on .qmd files
+
+-  **RStudio Integration:** RStudio offers a graphical user interface (GUI) for Git integration
 
 ## GitHub actions
+- **Workflow Automation** Can automate various tasks, including document generation.
 
-::: fragment
-### Automated document generation {style="text-align: center;"}
-:::
+- **Trigger Events:** Specify events, such as pushes or pull requests, to trigger document generation automatically.
+
 
 ## Additional Ressources
 
