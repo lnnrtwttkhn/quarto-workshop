@@ -56,26 +56,21 @@ date: today
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
-
--   Easy to use text editor language
--   Low learning curve
--   Integrated in R studio as R Markdown
--   `.md` files easily trackable with Git
--  Can be an **alternative to using `.docx` files**
--  Used by text editors, GitHub (README), message tools...
--  Content and formatting are integrated instead of seperated
-
+-   Easy to use
+-   "WYSIWYG" editor
+-   Content and formatting are integrated instead of seperated
+-   Can be an **alternative to using `.docx` files**
+-   Used by text editors, GitHub (README), message tools...
 :::
 :::
+
 ::: {.column width="50%"}
 ::: fragment
-
 ### E.g.: [HedgeDoc:](https://hedgedoc.org)
 
-<iframe src="https://pad.uni-hamburg.de/C6Dn13dLQ8OEe7g8RB7JCQ?both" width="100%" height="500px">
+<iframe src="https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w" width="100%" height="500px">
 
 </iframe>
-
 :::
 :::
 :::
@@ -93,6 +88,7 @@ date: today
 -   Integrated in Rstudio
 :::
 :::
+
 ::: {.column width="50%"}
 ::: fragment
 ### Usecases
@@ -104,7 +100,6 @@ date: today
 :::
 :::
 :::
-
 
 ## Getting started with Quarto
 
@@ -127,32 +122,29 @@ date: today
 
 1.  Download and Install [the newest version of Rstudio](https://posit.co/download/rstudio-desktop/)
 2.  Open R Studio
-3.  Create a new .qmd file through: New file -> Quarto Document
+3.  Create a new .qmd file through: New file -\> Quarto Document
 :::
 :::
 :::
 
 ## Rendering `.qmd` files
+
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
-
 ### Output formats
 
 -   **HTML (Standard)**
 -   PDF (requires a LaTeX installation)
-
 :::
 :::
 
 ::: {.column width="50%"}
 ::: fragment
-
 ### Presentations
 
 -   reveal.js (HTML)
 -   pptx (Powerpoint)
-
 :::
 :::
 :::
@@ -412,7 +404,6 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 -   The code can be as complicated as you want it to be
 -   You can also use *inline code*
 -   R code enclosed by ```` ```{r} code  ``` ````
-
 :::
 :::
 
@@ -469,7 +460,7 @@ Number of observations: `r 8*2020`
 
 ## Task 3:
 
--  Use (inline) code to display a mathmatical operation in your file
+-   Use (inline) code to display a mathmatical operation in your file
 
 ## YAML header
 
@@ -582,7 +573,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-#  Quarto in action
+# Quarto in action
 
 ## Usescases for researchers
 
@@ -602,20 +593,21 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Cool Example
 
--> Lennart Wittkunhns paper published with Quarto
+-\> Lennart Wittkunhns paper published with Quarto
 
 # Git integration
 
 ## Using Git with `.qmd` files
 
 ### Features
-- Plain textfiles so e.g. `git diff` works perfect!
-- Rstudio also has GUI integration of Git
+
+-   Plain textfiles so e.g. `git diff` works perfect!
+-   Rstudio also has GUI integration of Git
 
 ### `.gitignore file`
 
-- Should include rendered files like `.pdf`
-- When using Rstudio also files like `.Rproj` or `.RData`
+-   Should include rendered files like `.pdf`
+-   When using Rstudio also files like `.Rproj` or `.RData`
 
 ## GitHub actions
 
@@ -623,14 +615,13 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ### Automated document generation {style="text-align: center;"}
 :::
 
-
 ## Additional Ressources
 
-- [Official Quarto Documentation](https://quarto.org)
+-   [Official Quarto Documentation](https://quarto.org)
 
-- [Quartaki](https://drmowinckels.io/quartaki/) by Dr. Mowinckel
+-   [Quartaki](https://drmowinckels.io/quartaki/) by Dr. Mowinckel
 
-- [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) (Ressource Collection)
+-   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) (Ressource Collection)
 
 ## Questions and Answers
 
