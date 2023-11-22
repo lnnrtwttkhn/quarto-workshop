@@ -61,14 +61,15 @@ date: today
 -   Content and formatting are integrated instead of seperated
 -   Can be an **alternative to using `.docx` files**
 -   Used by text editors, GitHub (README), message tools...
+-   Integrated in Rstudio as "R Markdown"
 :::
 :::
 
 ::: {.column width="50%"}
 ::: fragment
-### E.g.: [HedgeDoc:](https://hedgedoc.org)
+### E.g.: [HedgeDoc:](https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w)
 
-<iframe src="https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w" width="100%" height="500px">
+<iframe src="https://hedgedoc.org" width="100%" height="500px">
 
 </iframe>
 :::
@@ -93,10 +94,10 @@ date: today
 ::: fragment
 ### Usecases
 
--   Articles/Reports
--   Websites
--   Presentations
--   "Books"
+-   [Articles/Reports](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html)
+-   [Websites](https://nasa-openscapes.github.io)
+-   **Presentations**
+-   ["Books"](https://lennartwittkuhn.com/version-control-book/)
 :::
 :::
 :::
