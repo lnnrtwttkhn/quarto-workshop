@@ -30,13 +30,49 @@ date: today
 ## Agenda
 
 -   Introduction to Quarto
+-   *Task 1*
 -   Markdown Basics
+-   *Task 2*
+-   *Task 3*
 -   Quarto in action
 -   Git integration
 -   Additional Resources
 -   Questions and Answers
 
 # Introduction to Quarto
+
+## What is Quarto?
+
+::: columns
+::: {.column width="50%"}
+::: fragment
+### Publishing System by Rstudio
+
+-   Based on R Markdown (= R Markdown with even more even features)
+-   Able to execute code
+-   Supports multiple programming languages
+-   Integrated in Rstudio
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+### Usecases
+
+-   [Articles/Reports](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html)
+-   [Websites](https://nasa-openscapes.github.io)
+-   **Presentations**
+-   ["Books"](https://lennartwittkuhn.com/version-control-book/)
+:::
+:::
+:::
+
+::: {.notes}
+2. Very new (2022)
+Created by rstudio´s  creators - like r markdown but for even more features
+E.g. Python code, Javascript, languages that dont even exist yet
+able to render markdown files
+:::
 
 ## Markdown {{< fa brands-markdown >}}
 
@@ -75,39 +111,6 @@ Formerly knows as CodiMD
 
 R markdown = designed to be used with R from Rstudio , integration of R code, create documents which include code, widely used in scientific community 
 ::: 
-
-## What is Quarto?
-
-::: columns
-::: {.column width="50%"}
-::: fragment
-### Publishing System by Rstudio
-
--   Based on R Markdown (= R Markdown with even more even features)
--   Able to execute code
--   Supports multiple programming languages
--   Integrated in Rstudio
-:::
-:::
-
-::: {.column width="50%"}
-::: fragment
-### Usecases
-
--   [Articles/Reports](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html)
--   [Websites](https://nasa-openscapes.github.io)
--   **Presentations**
--   ["Books"](https://lennartwittkuhn.com/version-control-book/)
-:::
-:::
-:::
-
-::: {.notes}
-2. Very new (2022)
-Created by rstudio´s  creators - like r markdown but for even more features
-E.g. Python code, Javascript, languages that dont even exist yet
-able to render markdown files
-:::
 
 ## Getting started with Quarto
 
@@ -159,7 +162,7 @@ able to render markdown files
 
 ## Task 1
 
--   Create a new **empty Quarto file** called recipes.qmd in R studio
+-   Create a new **empty Quarto file** called recipes.qmd in R studio and save it in your recipe repository
 -   Write a **short intro note** to your new recipe book
 -   Switch between visual and source mode
 -   Render the file as HTML file
