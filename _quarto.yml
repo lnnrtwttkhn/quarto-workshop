@@ -14,7 +14,7 @@ author:
     literal: Dr. Lennart Wittkuhn
   url: "{{< var homepage >}}"
   email: "{{< var email >}}"
-  orcid: "{{< var orcid >}}"
+  # orcid: "{{< var orcid >}}"
   # note: string
   # acknowledgements: string
   attributes:
