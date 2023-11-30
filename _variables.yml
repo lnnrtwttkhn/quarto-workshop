@@ -1,5 +1,5 @@
-title: "Intro to Quarto"
-subtitle: "Part of the Course: Version Control of Code and Data"
+title: "Introduction to Quarto"
+subtitle: "Part of the Course: Version Control of Code & Data"
 project-name: "quarto-presentation"
 footer: "{{< var title >}}"
 source: "https://lennartwittkuhn.com/version-control-course-uhh-ws23//"
