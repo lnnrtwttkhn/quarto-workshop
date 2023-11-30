@@ -11,6 +11,10 @@ subtitle: |
 date: today
 ---
 
+```{r}
+library(gt)
+```
+
 ### This presentation
 
 :computer: **Slides:** Slides are publicly available at [{{< var website >}}](%7B%7B%3C%20var%20website%20%3E%7D%7D)
@@ -177,59 +181,30 @@ date: today
 
 ## Text Formatting
 
-+-------------------------------+-------------------------------+
-| Markdown Syntax               | Output                        |
-+===============================+===============================+
-| ```                           | *italics* and **bold**        |
-| *italics* and **bold**        |                               |
-| ```                           |                               |
-+-------------------------------+-------------------------------+
-| ```                           | superscript^2^ / subscript~2~ |
-| superscript^2^ / subscript~2~ |                               |
-| ```                           |                               |
-+-------------------------------+-------------------------------+
-| ```                           | ~~strikethrough~~             |
-| ~~strikethrough~~             |                               |
-| ```                           |                               |
-+-------------------------------+-------------------------------+
-| ```                           | `verbatim code`               |
-| `verbatim code`               |                               |
-| ```                           |                               |
-+-------------------------------+-------------------------------+
-
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+make_table(name = "text_formatting") |>
+  gt() |>
+  fmt_markdown(columns = everything(), md_engine = "markdown") %>%
+  tab_options(table.width = px(400))
+```
 ::: footer
-Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartiki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
+Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
 ## Headings
 
-+-----------------+----------------+
-| Markdown Syntax | Output         |
-+=================+================+
-| ```             | # Header 1     |
-| # Header 1      |                |
-| ```             |                |
-+-----------------+----------------+
-| ```             | ## Header 2    |
-| ## Header 2     |                |
-| ```             |                |
-+-----------------+----------------+
-| ```             | ### Header 3   |
-| ### Header 3    |                |
-| ```             |                |
-+-----------------+----------------+
-| ```             | #### Header 4  |
-| #### Header 4   |                |
-| ```             |                |
-+-----------------+----------------+
-| ```             | ##### Header 5 |
-| ##### Header 5  |                |
-| ```             |                |
-+-----------------+----------------+
-| ```             | #              |
-| ###### Header 6 |                |
-| ```             | ##### Header 6 |
-+-----------------+----------------+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+make_table(name = "headings") |>
+  gt() |>
+  fmt_markdown(columns = everything(), md_engine = "markdown") %>%
+  tab_options(table.width = px(400))
+```
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
@@ -237,41 +212,15 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Lists
 
-::: nonincremental
-+--------------------------+------------------------+
-| Markdown Syntax          | Output                 |
-+==========================+========================+
-| ```                      | *   unordered list     |
-| * unordered list         |                        |
-|     + sub-item 1         |     +   sub-item 1     |
-|     + sub-item 2         |                        |
-|                          |     +   sub-item 2     |
-| ```                      |                        |
-|                          |                        |
-+--------------------------+------------------------+
-:::
-
-::: footer
-Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
-:::
-
-## Lists
-
-::: nonincremental
-+-----------------------------+------------------------+
-| Markdown Syntax             | Output                 |
-+=============================+========================+
-| ```                         | 1.  ordered list       |
-| 1. ordered list             |                        |
-| 2. item 2                   | 2.  item 2             |
-|     i) sub-item 1           |                        |
-|                             |     i)  sub-item 1     |
-| ```                         |                        |
-|                             |                        |
-|                             |                        |
-|                             |                        |
-+-----------------------------+------------------------+
-:::
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+make_table(name = "lists") |>
+  gt() |>
+  fmt_markdown(columns = everything(), md_engine = "markdown") %>%
+  tab_options(table.width = px(400))
+```
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
@@ -279,29 +228,15 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Tables
 
-::: columns
-::: {.column width="50%"}
-#### Markdown Syntax
-
-```         
-| Right | Left | Default | Center |
-|------:|:-----|---------|:------:|
-|   12  |  12  |    12   |    12  |
-|  123  |  123 |   123   |   123  |
-|    1  |    1 |     1   |     1  |
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+make_table(name = "tables") |>
+  gt() |>
+  fmt_markdown(columns = everything(), md_engine = "markdown") %>%
+  tab_options(table.width = px(400))
 ```
-:::
-
-::: {.column width="50%"}
-#### Output
-
-| Right | Left | Default | Center |
-|------:|:-----|---------|:------:|
-|    12 | 12   | 12      |   12   |
-|   123 | 123  | 123     |  123   |
-|     1 | 1    | 1       |   1    |
-:::
-:::
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
@@ -329,22 +264,15 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Blocks
 
-+-------------------------+---------------------+
-| Markdown Syntax         | Output              |
-+=========================+=====================+
-| ```                     | > Blockquote        |
-| > Blockquote            |                     |
-| ```                     |                     |
-+-------------------------+---------------------+
-| ```                     | | Line Block        |
-| | Line Block            | |                   |
-| |   Spaces and newlines |                     |
-| |   are preserved       | ```                 |
-| ```                     | Spaces and newlines |
-|                         | ```                 |
-|                         |                     |
-|                         | |    are preserved  |
-+-------------------------+---------------------+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+make_table(name = "blocks") |>
+  gt() |>
+  fmt_markdown(columns = everything(), md_engine = "markdown") %>%
+  tab_options(table.width = px(600))
+```
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
@@ -352,27 +280,15 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Links & Images
 
-+-----------------------------------+--------------------------------------------------------------------------+
-| Markdown Syntax                   | Output                                                                   |
-+===================================+==========================================================================+
-| ```                               | <https://oslobrains.no>                                                  |
-| <https://oslobrains.no>           |                                                                          |
-| ```                               |                                                                          |
-+-----------------------------------+--------------------------------------------------------------------------+
-| ```                               | [LCBC](https://oslobrains.no)                                            |
-| [LCBC](https://oslobrains.no)     |                                                                          |
-| ```                               |                                                                          |
-+-----------------------------------+--------------------------------------------------------------------------+
-| ```                               | ![Capt i o n](images/lcbc_logo_wide.png)                                 |
-| ![Ca                              |                                                                          |
-| ption](images/lcbc_logo_wide.png) |                                                                          |
-| ```                               |                                                                          |
-+-----------------------------------+--------------------------------------------------------------------------+
-| ```                               | [![Ca ption](images/lcbc_logo_wi%20d%20e%20.png)](https://oslobrains.no) |
-| [![Caption](images/lcbc_logo_     |                                                                          |
-| wide.png)](https://oslobrains.no) |                                                                          |
-| ```                               |                                                                          |
-+-----------------------------------+--------------------------------------------------------------------------+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+make_table(name = "links") |>
+  gt() |>
+  fmt_markdown(columns = everything(), md_engine = "markdown") %>%
+  tab_options(table.width = px(600))
+```
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
