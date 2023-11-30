@@ -58,7 +58,7 @@ format:
     footer: "{{< var footer >}}"
     transition: none
     transition-speed: fast
-    slide-number: "c/t"
+    slide-number: "c"
     fig-cap-location: bottom
     link-external-icon: false
     link-external-newwindow: true
