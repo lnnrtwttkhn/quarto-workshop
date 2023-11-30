@@ -26,6 +26,23 @@ author:
     - ref: uhh-psych
     # - ref: mpib
     # - ref: mps-ucl
+- id: pagenstedt
+  name:
+    given: Konrad
+    family: Pagenstedt
+    literal: Konrad Pagenstedt
+  email: "konrad.pagenstedt@studium.uni-hamburg.de"
+  # note: string
+  # acknowledgements: string
+  attributes:
+    corresponding: false
+    # equal-contributor: boolean
+    # deceased: boolean
+  # metadata: object
+  affiliations:
+    - ref: uhh-psych
+    # - ref: mpib
+    # - ref: mps-ucl
 format:
   revealjs:
     theme: [default, custom.scss]
