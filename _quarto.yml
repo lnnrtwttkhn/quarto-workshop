@@ -68,7 +68,7 @@ format:
     menu: true
     chalkboard: true
     mutliplex: false
-    code-fold: show
+    code-fold: false
     code-summary: "Show the code"
     code-overflow: wrap
     code-line-numbers: true
