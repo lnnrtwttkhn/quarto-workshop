@@ -12,6 +12,9 @@ date: today
 ---
 
 ```{r}
+#| echo: false
+#| message: false
+#| warning: false
 library(gt)
 ```
 
@@ -53,12 +56,12 @@ library(gt)
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
-### "Publishing system" by Posit ^[(company formerly known as RStudio)]
+### "Publishing system" by Posit [^1]
 
-- Based on RMarkdown
-- Able to execute code
-- Supports multiple programming languages
-- Integrated in RStudio
+-   Based on RMarkdown
+-   Able to execute code
+-   Supports multiple programming languages
+-   Integrated in RStudio
 :::
 :::
 
@@ -66,20 +69,22 @@ library(gt)
 ::: fragment
 ### Usecases
 
-- [Articles/Reports](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html)
-- [Websites](https://nasa-openscapes.github.io)
-- **Presentations**
-- [Books](https://lennartwittkuhn.com/version-control-book/)
+-   [Articles/Reports](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html)
+-   [Websites](https://nasa-openscapes.github.io)
+-   **Presentations**
+-   [Books](https://lennartwittkuhn.com/version-control-book/)
 :::
 :::
 :::
 
+[^1]: (company formerly known as RStudio)
+
 ::: notes
-- Very new (2022)
-- Created by Rstudio's creators
-- Like r markdown but for even more features, for example support of Python code, Javascript
-- Able to render ;arkdown files
-- publishing system = creating layout of text media and code
+-   Very new (2022)
+-   Created by Rstudio's creators
+-   Like r markdown but for even more features, for example support of Python code, Javascript
+-   Able to render ;arkdown files
+-   publishing system = creating layout of text media and code
 :::
 
 ## Markdown {{< fa brands markdown >}}
@@ -87,12 +92,12 @@ library(gt)
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
-- Easy to use
-- "Markup" language
-- Content and formatting are *integrated*, not separated
-- Alternative to `.docx` (Word) files (WYSIWYG)
-- Used by text editors, GitHub (e.g., READMEs), and more
-- Integrated in RStudio as "RMarkdown"
+-   Easy to use
+-   "Markup" language
+-   Content and formatting are *integrated*, not separated
+-   Alternative to `.docx` (Word) files (WYSIWYG)
+-   Used by text editors, GitHub (e.g., READMEs), and more
+-   Integrated in RStudio as "RMarkdown"
 :::
 :::
 
@@ -100,25 +105,27 @@ library(gt)
 ::: fragment
 ### Example: [HedgeDoc](https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w?both)
 
-<iframe src="https://hedgedoc.org" width="100%" height="500px"></iframe>
+<iframe src="https://hedgedoc.org" width="100%" height="500px">
+
+</iframe>
 :::
 :::
 :::
 
 ::: notes
-- Markup Language = text encoding system readable by machine
-- Pros:
-  - easier to use for quick notes
-  - faster to write since format and content intertwined
-  - version control
-  - faster
-  - less loading
-- Cons:
-  - less formatting options since its intentionally simple, e.g. tables pretty complex to do, or pictures less intuitive (once used to word)
-- Used by: GitHub, Slack Discord, Reddit Hedgedoc = open source markdown editor
-- Formerly knows as CodiMD
-- RMarkdown: designed to be used with R from Rstudio
-- integration of R code, create documents which include code, widely used in scientific community
+-   Markup Language = text encoding system readable by machine
+-   Pros:
+    -   easier to use for quick notes
+    -   faster to write since format and content intertwined
+    -   version control
+    -   faster
+    -   less loading
+-   Cons:
+    -   less formatting options since its intentionally simple, e.g. tables pretty complex to do, or pictures less intuitive (once used to word)
+-   Used by: GitHub, Slack Discord, Reddit Hedgedoc = open source markdown editor
+-   Formerly knows as CodiMD
+-   RMarkdown: designed to be used with R from Rstudio
+-   integration of R code, create documents which include code, widely used in scientific community
 :::
 
 ## Getting started with Quarto
@@ -128,11 +135,11 @@ library(gt)
 ::: fragment
 ### How can you work with Quarto?
 
-- **Rstudio**
-- Jupyter
-- Neovim
-- VS Code
-- Text editor
+-   **RStudio**
+-   Jupyter
+-   Neovim
+-   VS Code
+-   Text editor
 :::
 :::
 
@@ -140,9 +147,9 @@ library(gt)
 ::: fragment
 ### Creating a Quarto file
 
-1. Download and install [the newest version of RStudio](https://posit.co/download/rstudio-desktop/)
-2. Open RStudio
-3. Create a new `.qmd` file: "New file" ➡️ Quarto Document
+1.  Download and install [the newest version of RStudio](https://posit.co/download/rstudio-desktop/)
+2.  Open RStudio
+3.  Create a new `.qmd` file: "New file" ➡️ Quarto Document
 :::
 :::
 :::
@@ -154,9 +161,9 @@ library(gt)
 ::: fragment
 ### Output formats
 
-- **HTML (Standard)**
-- PDF (requires  LaTeX)
-- Word (requires MS Word)
+-   **HTML (Standard)**
+-   PDF (requires LaTeX)
+-   Word (requires MS Word)
 :::
 :::
 
@@ -164,18 +171,18 @@ library(gt)
 ::: fragment
 ### Presentations
 
-- reveal.js (HTML)
-- Powerpoint (requires MS Powerpoint)
+-   reveal.js (HTML)
+-   Powerpoint (requires MS Powerpoint)
 :::
 :::
 :::
 
 ## Task 1
 
-- Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
-- Write a **short introduction note** to your new recipe book
-- Switch between visual and source mode
-- Render the file to HTML
+-   Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
+-   Write a **short introduction note** to your new recipe book
+-   Switch between visual and source mode
+-   Render the file to HTML
 
 # Markdown basics
 
@@ -185,11 +192,13 @@ library(gt)
 #| echo: false
 #| message: false
 #| warning: false
+#| 
 make_table(name = "text_formatting") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(400))
+  tab_options(table.width = px(800), table.font.size = 30)
 ```
+
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
@@ -203,7 +212,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "headings") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(400))
+  tab_options(table.width = px(800), table.font.size = 30)
 ```
 
 ::: footer
@@ -219,7 +228,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "lists") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(400))
+  tab_options(table.width = px(800), table.font.size = 30)
 ```
 
 ::: footer
@@ -235,7 +244,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "tables") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(400))
+  tab_options(table.width = px(800), table.font.size = 30)
 ```
 
 ::: footer
@@ -271,7 +280,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "blocks") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(600))
+  tab_options(table.width = px(800), table.font.size = 30)
 ```
 
 ::: footer
@@ -287,7 +296,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "links") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(600))
+  tab_options(table.width = px(800), table.font.size = 30)
 ```
 
 ::: footer
@@ -298,8 +307,8 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Task 2
 
-- Copy paste a **recipe** from the web **into the `recipes.qmd` file**
-- Format the text by applying at least **three types of Markdown syntax**
+-   Copy paste a **recipe** from the web **into the `recipes.qmd` file**
+-   Format the text by applying at least **three types of Markdown syntax**
 
 # YAML header
 
@@ -319,7 +328,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ::: fragment
 ### Examples
 
-```yaml
+``` yaml
 ---
 title: "Document title"
 author: "Your Name"
@@ -330,9 +339,9 @@ format: pdf
 :::
 
 ::: fragment
-The YAML header of [these slides]({{< var source >}}/blob/main/index.qmd#L1-L12):
+The YAML header of [these slides](%7B%7B%3C%20var%20source%20%3E%7D%7D/blob/main/index.qmd#L1-L12):
 
-```yaml
+``` yaml
 ---
 title: "{{< var title >}}"
 subtitle: |
@@ -352,10 +361,10 @@ date: today
 :::
 
 ::: notes
-- YAML: Datenformat in konfiguartionsdateien
-- viele andere Anwendungsmöglichkeiten,
-- Metadata for files, today only author, title and output format and Theme
-- Could also do e.g. date:
+-   YAML: Datenformat in konfiguartionsdateien
+-   viele andere Anwendungsmöglichkeiten,
+-   Metadata for files, today only author, title and output format and Theme
+-   Could also do e.g. date:
 :::
 
 ::: footer
@@ -366,8 +375,8 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Task 3
 
-- Add a YAML header to your file
-- Include **your name**, a **title**, an **[output format](https://quarto.org/docs/output-formats/all-formats.html) (e.g., HTML)** and a **[theme](https://quarto.org/docs/output-formats/html-themes.html)**
+-   Add a YAML header to your file
+-   Include **your name**, a **title**, an [**output format**](https://quarto.org/docs/output-formats/all-formats.html) **(e.g., HTML)** and a [**theme**](https://quarto.org/docs/output-formats/html-themes.html)
 
 # Code chunks
 
@@ -376,12 +385,12 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
-- **Executable Code:** Quarto files support code execution during rendering
-- Code chunks can be interactive
-- **Customizable Options:** Specify various options for code chunks
-- **Complex Code Supported:** Handle as complex code as needed
-- You can also use *inline code*
-- R code enclosed by ```` ```{r} code ``` ````
+-   **Executable Code:** Quarto files support code execution during rendering
+-   Code chunks can be interactive
+-   **Customizable Options:** Specify various options for code chunks
+-   **Complex Code Supported:** Handle as complex code as needed
+-   You can also use *inline code*
+-   R code enclosed by ```` ```{r} code ``` ````
 :::
 :::
 
@@ -447,8 +456,8 @@ Code: you dont have to use it for a recipe book but its possible
 
 ## Referencing
 
-- You can name objects like figures, tables...
-- For example: @sec-citations (`@sec-citations`)
+-   You can name objects like figures, tables...
+-   For example: @sec-citations (`@sec-citations`)
 
 | Type         | Label Prefix |
 |--------------|--------------|
@@ -465,9 +474,9 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Citations {#sec-citations}
 
-- Can be added via `Insert` ➡️ `Citation`
-- Can also be added directly with `@`
-- Are stored in [BibTeX](https://www.bibtex.org/) files in your project
+-   Can be added via `Insert` ➡️ `Citation`
+-   Can also be added directly with `@`
+-   Are stored in [BibTeX](https://www.bibtex.org/) files in your project
 
 +----------------------------------------------+--------------------------------------------------------------+
 | Markdown Format                              | Output (author-date format)                                  |
@@ -503,11 +512,11 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Usescases for researchers
 
-- Reproducible research
-- Data analysis & visualization
-- Dynamic documents
-- Presentation slides
-- Automated reports
+-   Reproducible research
+-   Data analysis & visualization
+-   Dynamic documents
+-   Presentation slides
+-   Automated reports
 
 ::: fragment
 ### Publishing reproducible papers {style="text-align: center;"}
@@ -523,30 +532,32 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ### Features
 
-- **Plain Text Files:** `.qmd` files are plain text, ensuring compatibility with `git diff` for effective version control
-- **Branching and Merging:** Use Git's branching and merging capabilities to manage complex document edits.
-- **Conflict Resolution:** Resolve conflicts efficiently when collaborating on `.qmd` files
-- **RStudio Integration:** RStudio offers a graphical user interface (GUI) for Git integration
+-   **Plain Text Files:** `.qmd` files are plain text, ensuring compatibility with `git diff` for effective version control
+-   **Branching and Merging:** Use Git's branching and merging capabilities to manage complex document edits.
+-   **Conflict Resolution:** Resolve conflicts efficiently when collaborating on `.qmd` files
+-   **RStudio Integration:** RStudio offers a graphical user interface (GUI) for Git integration
 
 ## GitHub actions
 
-- **Workflow Automation** Can automate various tasks, including document generation.
-- **Trigger Events:** Specify events, such as pushes or pull requests, to trigger document generation automatically.
-- Can allow you to easily update website built with Quarto (hosted with GitHub pages)
+-   **Workflow Automation** Can automate various tasks, including document generation.
+-   **Trigger Events:** Specify events, such as pushes or pull requests, to trigger document generation automatically.
+-   Can allow you to easily update website built with Quarto (hosted with GitHub pages)
 
 ## Further reading
 
-- [Official Quarto Documentation](https://quarto.org)
-- [Quartaki](https://drmowinckels.io/quartaki/) by Dr. Mowinckel
-- [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) (Resource Collection)
+-   [Official Quarto Documentation](https://quarto.org)
+-   [Quartaki](https://drmowinckels.io/quartaki/) by Dr. Mowinckel
+-   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) (Resource Collection)
 
 ## Tasks until next week
 
-1. Ensure you have a Git repository named `recipes` set up on your computer
-1. Inside the repository have a `recipes.qmd` file and (optionally) a `.gitignore` file
-1. Inside the `recipes.qmd` file, share at least one recipe.
+1.  Ensure you have a Git repository named `recipes` set up on your computer
+2.  Inside the repository have a `recipes.qmd` file and (optionally) a `.gitignore` file
+3.  Inside the `recipes.qmd` file, share at least one recipe.
 
 If you've done this, you're all set!
+
+# Questions?
 
 ## Questions and Answers
 

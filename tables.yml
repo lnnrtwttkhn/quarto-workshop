@@ -18,7 +18,7 @@ lists:
   - |
     1. ordered list
     2. item 2
-        i) sub-item 1
+        1. sub-item 1
   - |
     1. ordered list
     1. item 2
@@ -44,3 +44,5 @@ links:
   - "[Quarto](https://quarto.org/)"
   - "![Caption](https://quarto.org/quarto.png)"
   - "[![Caption](https://quarto.org/quarto.png)](https://quarto.org)"
+code_chunks:
+  - "Number of observations: `r 8*20`"
