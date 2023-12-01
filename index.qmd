@@ -481,26 +481,26 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 +----------------------------------------------+--------------------------------------------------------------+
 | Markdown Format                              | Output (author-date format)                                  |
 +==============================================+==============================================================+
-| ```                                          | Blip blop bloop [see @biswal2010, pp. 33-35; also , chap. 1] |
-| Blip blop bloop [see @biswal2010, pp. 33-35; |                                                              |
+| ```                                          | Blip blop bloop [see @chacon2014, pp. 33-35; also , chap. 1] |
+| Blip blop bloop [see @chacon2014, pp. 33-35; |                                                              |
 | also @ggseg, chap. 1]                        |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
-| ```                                          | Blip blop bloop [@biswal2010, pp. 33-35, 38-39 and passim]   |
-| Blip blop bloop [@biswal2010, pp. 33-35,     |                                                              |
+| ```                                          | Blip blop bloop [@chacon2014, pp. 33-35, 38-39 and passim]   |
+| Blip blop bloop [@chacon2014, pp. 33-35,     |                                                              |
 | 38-39 and passim]                            |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
-| ```                                          | Blip blop bloop [@ggseg; @biswal2010].                       |
-| Blip blop bloop [@ggseg; @biswal2010].       |                                                              |
+| ```                                          | Blip blop bloop [@ggseg;@chacon2014].                       |
+| Blip blop bloop [@ggseg; @chacon2014].       |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
-| ```                                          | Mowinckel says blah [-@ggseg]                                |
-| Mowinckel says blah [-@ggseg]                |                                                              |
+| ```                                          | Mowinckel says blah [-@chacon2014]                           |
+| Mowinckel says blah [-@chacon2014]           |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
-| ```                                          | @biswal2010 says bloop.                                      |
-| @biswal2010 says bloop.                      |                                                              |
+| ```                                          | @chacon2014 says bloop.                                      |
+| @chacon2014 says bloop.                      |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
 
