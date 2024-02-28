@@ -1,0 +1,48 @@
+text_formatting:
+  - "*italics* and **bold**"
+  - "superscript^2^ / subscript~2~"
+  - "~~strikethrough~~"
+  - "`verbatim code`"
+headings:
+  - "# Header 1"
+  - "## Header 2"
+  - "### Header 3"
+  - "#### Header 4"
+  - "##### Header 5"
+  - "###### Header 6"
+lists:
+  - |
+    * unordered list
+      + sub-item 1
+      + sub-item 2
+  - |
+    1. ordered list
+    2. item 2
+        1. sub-item 1
+  - |
+    1. ordered list
+    1. item 2
+    1. item 3
+    1. item 4
+tables:
+  - |
+    | Right | Left | Default | Center |
+    |------:|:-----|---------|:------:|
+    |   12  |  12  |    12   |    12  |
+    |  123  |  123 |   123   |   123  |
+    |    1  |    1 |     1   |     1  |
+equations:
+  - "inline math: $E = mc^{2}$"
+  - |
+    display math:
+    
+    $$E = mc^{2}$$
+blocks:
+  - "> Blockquote"
+links:
+  - "<https://quarto.org/>"
+  - "[Quarto](https://quarto.org/)"
+  - "![Caption](https://quarto.org/quarto.png)"
+  - "[![Caption](https://quarto.org/quarto.png)](https://quarto.org)"
+code_chunks:
+  - "Number of observations: `r 8*20`"

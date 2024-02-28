@@ -14,11 +14,28 @@ author:
     literal: Dr. Lennart Wittkuhn
   url: "{{< var homepage >}}"
   email: "{{< var email >}}"
-  orcid: "{{< var orcid >}}"
+  # orcid: "{{< var orcid >}}"
   # note: string
   # acknowledgements: string
   attributes:
     corresponding: true
+    # equal-contributor: boolean
+    # deceased: boolean
+  # metadata: object
+  affiliations:
+    - ref: uhh-psych
+    # - ref: mpib
+    # - ref: mps-ucl
+- id: pagenstedt
+  name:
+    given: Konrad
+    family: Pagenstedt
+    literal: Konrad Pagenstedt
+  email: "konrad.pagenstedt@studium.uni-hamburg.de"
+  # note: string
+  # acknowledgements: string
+  attributes:
+    corresponding: false
     # equal-contributor: boolean
     # deceased: boolean
   # metadata: object
@@ -41,7 +58,7 @@ format:
     footer: "{{< var footer >}}"
     transition: none
     transition-speed: fast
-    slide-number: "c/t"
+    slide-number: "c"
     fig-cap-location: bottom
     link-external-icon: false
     link-external-newwindow: true
@@ -51,7 +68,7 @@ format:
     menu: true
     chalkboard: true
     mutliplex: false
-    code-fold: show
+    code-fold: false
     code-summary: "Show the code"
     code-overflow: wrap
     code-line-numbers: true
@@ -62,11 +79,10 @@ format:
       source: "{{ var source }}"
       toggle: true
       caption: "Code"
-    highlight-style: monokai
     date-format: long
     engine: knitr
     execute:
-      eval: false
+      eval: true
       echo: true
     bibliography: references.bib
     # csl: "apa-6th-edition.csl"
