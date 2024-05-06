@@ -8,7 +8,7 @@ subtitle: |
   
   {{< var license-badge >}}
   {{< var doi-badge >}}
-date: today
+date: 2024-05-13
 ---
 
 ```{r}
