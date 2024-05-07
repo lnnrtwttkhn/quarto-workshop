@@ -33,6 +33,13 @@ library(gt)
 <iframe width="100%" height="80%" src="https://lennartwittkuhn.com/version-control-book/chapters/branches.html" title="Version Control Book"></iframe>
 ```
 
+## This Week: Quarto
+
+{{< fa display >}} [https://quarto.org](https://quarto.org)
+```{=html}
+<iframe width="100%" height="80%" src="https://quarto.org" title="quarto.org"></iframe>
+```
+
 ## Goals of this Session
 
 ::: fragment
@@ -334,7 +341,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 -   ***Y**AML **A**in't **M**arkup **L**anguage*
 -   **Document Settings:** YAML sets up document settings like *title*, *author*, and *output format*.
 -   **Customization:** Use YAML for themes and styling.
--   [**Themes**](https://quarto.org/docs/output-formats/html-themes.html): e.g., `defaul`, `morph` or `pulse`
+-   [**Themes**](https://quarto.org/docs/output-formats/html-themes.html): e.g., `default`, `morph` or `pulse`
 :::
 :::
 
