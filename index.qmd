@@ -198,6 +198,30 @@ library(gt)
 :::
 :::
 
+::: fragment
+#### How to render `qmd` files
+:::
+
+
+::: fragment
+1.
+```yaml
+quarto preview
+```
+:::
+
+::: fragment
+2.
+```yaml
+quarto render
+```
+:::
+
+:::fragment
+3.
+use **Render Button** in RStudio
+:::
+
 ## Task 2
 
 -   Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
@@ -259,6 +283,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Tables
 
+::: fragment
 ```{r}
 #| echo: false
 #| message: false
@@ -268,6 +293,12 @@ make_table(name = "tables") |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
   tab_options(table.width = px(800), table.font.size = 30)
 ```
+:::
+
+::: fragment
+{{< fa display >}} [Table Generator](https://www.tablesgenerator.com/markdown_tables)
+:::
+
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
