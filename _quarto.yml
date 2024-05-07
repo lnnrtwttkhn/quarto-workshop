@@ -49,7 +49,7 @@ format:
     smooth-scroll: true
     html-math-method: katex
     email-obfuscation: none
-    toc: false
+    toc: true
     toc-depth: 2
     toc-title: "Agenda"
     number-sections: false
