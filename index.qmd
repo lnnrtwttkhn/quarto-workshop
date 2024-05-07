@@ -563,7 +563,7 @@ If you've done this, you're all set!
 
 ::: columns
 ::: {.column width="35%"}
-![](images/photo_wittkuhn_portrait.jpg)
+![](images/photo-wittkuhn-uhh.jpg)
 
 #### Dr. Lennart Wittkuhn
 
