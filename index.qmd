@@ -49,6 +49,47 @@ library(gt)
 -   Questions and Answers
 :::
 
+## Schedule
+
+<iframe src="https://lennartwittkuhn.com/version-control-course-uhh-ws23/schedule.html" width="100%" height="500px">
+
+</iframe>
+
+# Last week: Branches
+
+## Last week: Branches
+
+{{< fa display >}} [lennartwittkuhn.com/version-control-book/chapters/branches.html](https://lennartwittkuhn.com/version-control-book/chapters/branches.html)
+```{=html}
+<iframe width="100%" height="80%" src="https://lennartwittkuhn.com/version-control-book/chapters/branches.html" title="Version Control Book"></iframe>
+```
+
+## Goals of this Session
+
+::: fragment
+:bulb: Learn the basics of Markdown syntax <br>
+:::
+
+::: fragment
+:bulb: Work on a new `quarto` branch in your recipes repo <br>
+:::
+
+::: fragment
+:bulb: Create a neat quarto recipe file <br>
+:::
+
+::: fragment
+:bulb: Merge your new file into your main branch
+:::
+
+::: fragment
+- Your quarto file can later be turned into a website!
+:::
+
+## Task 1
+
+- Create a new `quarto` branch in your recipe repository and switch to it
+
 # Introduction to Quarto
 
 ## What is Quarto?
@@ -75,6 +116,10 @@ library(gt)
 -   [Books](https://lennartwittkuhn.com/version-control-book/)
 :::
 :::
+:::
+
+::: fragment
+![Image from [Hello Quarto Presentation](https://mine.quarto.pub/hello-quarto/#/publishing-system-2) from  [Mine Çetinkaya-Rundel PhD](https://mine-cr.com)](../images/quarto_illustration.png){#fig-quarto}
 :::
 
 [^1]: (company formerly known as RStudio)
@@ -177,12 +222,13 @@ library(gt)
 :::
 :::
 
-## Task 1
+## Task 2
 
 -   Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
 -   Write a **short introduction note** to your new recipe book
 -   Switch between visual and source mode
 -   Render the file to HTML
+- **Stage** and **Commit** your new file
 
 # Markdown basics
 
@@ -303,12 +349,11 @@ make_table(name = "links") |>
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-# Task 2
-
-## Task 2
+## Task 3
 
 -   Copy paste a **recipe** from the web **into the `recipes.qmd` file**
 -   Format the text by applying at least **three types of Markdown syntax**
+-   **Stage** and **Commit** your changes
 
 # YAML header
 
@@ -371,12 +416,12 @@ date: today
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-# Task 3
-
-## Task 3
+## Task 4
 
 -   Add a YAML header to your file
 -   Include **your name**, a **title**, an [**output format**](https://quarto.org/docs/output-formats/all-formats.html) **(e.g., HTML)** and a [**theme**](https://quarto.org/docs/output-formats/html-themes.html)
+-   **Stage** and **Commit** your changes
+-   **Merge** your "quarto" branch into your main branch
 
 # Code chunks
 
@@ -491,7 +536,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 | 38-39 and passim]                            |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
-| ```                                          | Blip blop bloop [@ggseg;@chacon2014].                       |
+| ```                                          | Blip blop bloop [@ggseg; @chacon2014]. \|                    |
 | Blip blop bloop [@ggseg; @chacon2014].       |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
@@ -549,7 +594,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 -   [Quartaki](https://drmowinckels.io/quartaki/) by Dr. Mowinckel
 -   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) (Resource Collection)
 
-## Tasks until next week
+## Tasks until next session
 
 1.  Ensure you have a Git repository named `recipes` set up on your computer
 2.  Inside the repository have a `recipes.qmd` file and (optionally) a `.gitignore` file
