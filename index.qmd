@@ -18,37 +18,6 @@ date: 2024-05-13
 library(gt)
 ```
 
-### This presentation
-
-:computer: **Slides:** Slides are publicly available at [{{< var website >}}](%7B%7B%3C%20var%20website%20%3E%7D%7D)
-
-:package: **Software:** Reproducible slides built with [Quarto](https://quarto.org/) and deployed to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions)
-
-```{=html}
-<!-- 
-:trackball: **DOI:** [10.5281/zenodo.5012476](http://doi.org/10.5281/zenodo.5012476) (generated using GitHub releases + Zenodo, see details [here](https://guides.github.com/activities/citable-code/))
--->
-```
-{{< fa brands github >}} **Source:** Source code is publicly available on GitHub at [{{< var source >}}](%7B%7B%3C%20var%20source%20%3E%7D%7D)
-
-:pray: **Contact:** I am happy for any feedback or suggestions via [email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D) or [GitHub issues](%7B%7B%3C%20var%20issues%20%3E%7D%7D). Thank you!
-
-## Agenda
-
--   Introduction to Quarto
--   *Task 1*
--   Markdown Basics
--   *Task 2*
-
-::: fragment
--   Quarto basics
--   *Task 3*
--   Quarto in action
--   Git integration
--   Additional Resources
--   Questions and Answers
-:::
-
 ## Schedule
 
 <iframe src="https://lennartwittkuhn.com/version-control-course-uhh-ws23/schedule.html" width="100%" height="500px">
@@ -119,7 +88,7 @@ library(gt)
 :::
 
 ::: fragment
-![Image from [Hello Quarto Presentation](https://mine.quarto.pub/hello-quarto/#/publishing-system-2) from  [Mine Çetinkaya-Rundel PhD](https://mine-cr.com)](../images/quarto_illustration.png){#fig-quarto}
+![Image from [Hello Quarto Presentation](https://mine.quarto.pub/hello-quarto/#/publishing-system-2) from  [Mine Çetinkaya-Rundel PhD](https://mine-cr.com)](images/quarto_illustration.png){#fig-quarto}
 :::
 
 [^1]: (company formerly known as RStudio)
