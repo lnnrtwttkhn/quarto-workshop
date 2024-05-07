@@ -4,7 +4,6 @@ author: "Gourmet Chef"
 date: "2024-05-07"
 format:
   html:
-    theme: cosmo
     toc: true
     toc-depth: 2
     number-sections: true
@@ -50,10 +49,10 @@ format:
 
 ## Nutritional Information
 
-```{r calories}
-# R code to calculate total calories
-calories_per_serving <- 600
-number_of_servings <- 4
-total_calories <- calories_per_serving * number_of_servings
-paste("Total calories for the batch: ", total_calories)
-```
+Per Serving:
+- **Calories**: 600
+- **Protein**: 40g
+- **Carbohydrates**: 45g
+- **Fat**: 30g
+
+
