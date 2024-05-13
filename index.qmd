@@ -391,7 +391,6 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 ::::: {.columns}
 :::: {.column width="50%"}
 ::: {.incremental}
--   **Y**AML **A**in't **M**arkup **L**anguage*
 -   **Document settings:** YAML sets up document settings like *title*, *author*, and *output format*.
 -   **Customization:** Use YAML for themes and styling.
 -   Specify [themes](https://quarto.org/docs/output-formats/html-themes.html): for example, "default" or "morph"
