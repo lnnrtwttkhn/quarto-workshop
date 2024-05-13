@@ -8,7 +8,7 @@ subtitle: |
   
   {{< var license-badge >}}
   {{< var doi-badge >}}
-date: today
+date: 2024-05-13
 ---
 
 ```{r}
@@ -16,46 +16,64 @@ date: today
 #| message: false
 #| warning: false
 library(gt)
+source("functions.R")
+gt_font_size <- 30
+gt_table_width = 1000
 ```
 
-### This presentation
+## Schedule
 
-:computer: **Slides:** Slides are publicly available at [{{< var website >}}](%7B%7B%3C%20var%20website%20%3E%7D%7D)
+<iframe src="https://lennartwittkuhn.com/version-control-course-uhh-ss24/schedule.html" width="100%" height="500px">
 
-:package: **Software:** Reproducible slides built with [Quarto](https://quarto.org/) and deployed to [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions)
+</iframe>
 
+# Last week: Branches
+
+## Last week: Branches
+
+{{< fa display >}} [lennartwittkuhn.com/version-control-book/chapters/branches.html](https://lennartwittkuhn.com/version-control-book/chapters/branches.html)
 ```{=html}
-<!-- 
-:trackball: **DOI:** [10.5281/zenodo.5012476](http://doi.org/10.5281/zenodo.5012476) (generated using GitHub releases + Zenodo, see details [here](https://guides.github.com/activities/citable-code/))
--->
+<iframe width="100%" height="80%" src="https://lennartwittkuhn.com/version-control-book/chapters/branches.html" title="Version Control Book"></iframe>
 ```
-{{< fa brands github >}} **Source:** Source code is publicly available on GitHub at [{{< var source >}}](%7B%7B%3C%20var%20source%20%3E%7D%7D)
 
-:pray: **Contact:** I am happy for any feedback or suggestions via [email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D) or [GitHub issues](%7B%7B%3C%20var%20issues%20%3E%7D%7D). Thank you!
+## This week: Quarto
 
-## Agenda
+{{< fa display >}} [https://quarto.org](https://quarto.org)
+```{=html}
+<iframe width="100%" height="75%" src="https://quarto.org" title="quarto.org"></iframe>
+```
 
--   Introduction to Quarto
--   *Task 1*
--   Markdown Basics
--   *Task 2*
+## Goals of this session
 
-::: fragment
--   Quarto basics
--   *Task 3*
--   Quarto in action
--   Git integration
--   Additional Resources
--   Questions and Answers
+::: {.fragment}
+:bulb: Learn the basics of the Markdown syntax
+:::
+
+::: {.fragment}
+:bulb: Work on a new `quarto` branch in your `recipes` repo
+:::
+
+::: {.fragment}
+:bulb: Create a neat recipe file using Quarto
+:::
+
+::: {.fragment}
+:bulb: When you are done, merge the changes into your `main` branch
+:::
+
+::: {.fragment}
+**Outlook:** Your Quarto file can later be turned into a website!
+
+See <https://lennartwittkuhn.com/recipes/>
 :::
 
 # Introduction to Quarto
 
 ## What is Quarto?
 
-::: columns
-::: {.column width="50%"}
-::: fragment
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.fragment}
 ### "Publishing system" by Posit [^1]
 
 -   Based on RMarkdown
@@ -63,10 +81,9 @@ library(gt)
 -   Supports multiple programming languages
 -   Integrated in RStudio
 :::
-:::
-
-::: {.column width="50%"}
-::: fragment
+::::
+:::: {.column width="50%"}
+::: {.fragment}
 ### Usecases
 
 -   [Articles/Reports](https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html)
@@ -74,35 +91,141 @@ library(gt)
 -   **Presentations**
 -   [Books](https://lennartwittkuhn.com/version-control-book/)
 :::
-:::
-:::
+::::
+:::::
 
-[^1]: (company formerly known as RStudio)
+![A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto. Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel. Illustrated by Allison Horst ([Source](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)).](images/quarto-illustration.png){#fig-quarto width="80%"}
 
-::: notes
+[^1]: (the company formerly known as RStudio)
+
+::: {.notes}
 -   Very new (2022)
 -   Created by Rstudio's creators
 -   Like r markdown but for even more features, for example support of Python code, Javascript
--   Able to render ;arkdown files
+-   Able to render Markdown files
 -   publishing system = creating layout of text media and code
 :::
 
-## Markdown {{< fa brands markdown >}}
+## Getting started with Quarto
+
+::: columns
+::: {.column width="40%"}
+::: fragment
+### How can you work with Quarto?
+
+You can use one of the following editors:
+
+-   **RStudio**
+-   Jupyter
+-   Neovim
+-   VS Code
+-   Text editor
+:::
+:::
+
+::: {.column width="60%"}
+::: {.fragment}
+### Creating a Quarto file in RStudio
+
+1.  Download and install [the newest version of RStudio](https://posit.co/download/rstudio-desktop/)
+2.  Open RStudio
+3.  Create a new `.qmd` file: "File" > "New file" > "Quarto Document"
+:::
+:::
+:::
+
+## Rendering Quarto files
 
 ::: columns
 ::: {.column width="50%"}
-::: fragment
+::: {.fragment}
+### Output formats
+
+-   **HTML (standard)**
+-   PDF (requires LaTeX)
+-   Word (requires MS Word)
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+### Presentations
+
+-   reveal.js (HTML)
+-   Powerpoint (requires MS Powerpoint)
+:::
+:::
+:::
+
+## How to render Quarto files
+
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.fragment}
+#### 1. Preview
+```{zsh filename="Code"}
+#| eval: false
+quarto preview
+```
+
+- The document will be rendered and a web browser with a "live preview" opened
+- Position this browser so that you can see it as you edit and save the document
+- Every time you save the preview will be automatically updated
+
+:::
+::: {.fragment}
+![](images/vim-preview.png)
+:::
+::::
+:::: {.column width="50%"}
+::: {.fragment}
+#### 2. Render
+```{zsh filename="Code"}
+#| eval: false
+quarto render
+```
+- Render a document (or group of documents) without previewing them
+- You can also use the **Render** button in RStudio and enable **Render on Save**
+
+![](images/rstudio-render.png)
+![](images/rstudio-render-on-save.png)
+
+:::
+::::
+:::::
+
+## Your turn
+
+### Task 1
+
+1. Create a new `quarto` branch in your `recipes` repository and switch to it
+
+### Task 2
+
+1.    Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
+1.    Write a **short introduction note** to your new recipe book
+1.    Switch between Quarto's visual and source mode
+1.    Render the file to HTML
+1.    **Stage** and **commit** your new file
+
+# Basics of Markdown
+
+## Markdown
+
+::: columns
+::: {.column width="50%"}
+::: {.incremental}
 -   Easy to use
 -   "Markup" language
 -   Content and formatting are *integrated*, not separated
--   Alternative to `.docx` (Word) files (WYSIWYG)
+-   Alternative to "What You See Is What You Get" (WYSIWYG) editors like MS Word
 -   Used by text editors, GitHub (e.g., READMEs), and more
 -   Integrated in RStudio as "RMarkdown"
 :::
 :::
 
 ::: {.column width="50%"}
-::: fragment
+::: {.fragment}
 ### Example: [HedgeDoc](https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w?both)
 
 <iframe src="https://hedgedoc.org" width="100%" height="500px">
@@ -128,75 +251,17 @@ library(gt)
 -   integration of R code, create documents which include code, widely used in scientific community
 :::
 
-## Getting started with Quarto
-
-::: columns
-::: {.column width="50%"}
-::: fragment
-### How can you work with Quarto?
-
--   **RStudio**
--   Jupyter
--   Neovim
--   VS Code
--   Text editor
-:::
-:::
-
-::: {.column width="50%"}
-::: fragment
-### Creating a Quarto file
-
-1.  Download and install [the newest version of RStudio](https://posit.co/download/rstudio-desktop/)
-2.  Open RStudio
-3.  Create a new `.qmd` file: "New file" ➡️ Quarto Document
-:::
-:::
-:::
-
-## Rendering `.qmd` files
-
-::: columns
-::: {.column width="50%"}
-::: fragment
-### Output formats
-
--   **HTML (Standard)**
--   PDF (requires LaTeX)
--   Word (requires MS Word)
-:::
-:::
-
-::: {.column width="50%"}
-::: fragment
-### Presentations
-
--   reveal.js (HTML)
--   Powerpoint (requires MS Powerpoint)
-:::
-:::
-:::
-
-## Task 1
-
--   Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
--   Write a **short introduction note** to your new recipe book
--   Switch between visual and source mode
--   Render the file to HTML
-
-# Markdown basics
-
 ## Text Formatting
 
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
-#| 
 make_table(name = "text_formatting") |>
   gt() |>
-  fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(800), table.font.size = 30)
+  fmt_markdown(columns = everything(), md_engine = "markdown") |>
+  tab_options(table.width = px(gt_table_width), table.font.size = gt_font_size) |>
+  gt_theme()
 ```
 
 ::: footer
@@ -212,7 +277,8 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "headings") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(800), table.font.size = 30)
+  tab_options(table.width = px(gt_table_width), table.font.size = gt_font_size) |>
+  gt_theme()
 ```
 
 ::: footer
@@ -228,7 +294,8 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "lists") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(800), table.font.size = 30)
+  tab_options(table.width = px(gt_table_width), table.font.size = gt_font_size) |>
+  gt_theme()
 ```
 
 ::: footer
@@ -244,8 +311,14 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "tables") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(800), table.font.size = 30)
+  tab_options(table.width = px(gt_table_width), table.font.size = gt_font_size) |>
+  gt_theme()
 ```
+
+::: {.fragment}
+:bulb: Tip: Use a Markdown [table generator](https://www.tablesgenerator.com/markdown_tables)
+:::
+
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
@@ -280,14 +353,15 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "blocks") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(800), table.font.size = 30)
+  tab_options(table.width = px(gt_table_width), table.font.size = gt_font_size) |>
+  gt_theme()
 ```
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-## Links & Images
+## Links and images
 
 ```{r}
 #| echo: false
@@ -296,39 +370,37 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 make_table(name = "links") |>
   gt() |>
   fmt_markdown(columns = everything(), md_engine = "markdown") %>%
-  tab_options(table.width = px(800), table.font.size = 30)
+  tab_options(table.width = px(gt_table_width), table.font.size = gt_font_size) |>
+  gt_theme()
 ```
 
 ::: footer
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-# Task 2
+## Task 3
 
-## Task 2
+1.    **Add a recipe** to the `recipes.qmd` file (quickly copy-paste from the web)
+1.    Format the text by applying at least **three types of Markdown syntax**
+1.    **Stage** and **commit** your changes
 
--   Copy paste a **recipe** from the web **into the `recipes.qmd` file**
--   Format the text by applying at least **three types of Markdown syntax**
-
-# YAML header
+# The YAML header
 
 ## YAML
 
-::: columns
-::: {.column width="50%"}
-::: fragment
--   ***Y**AML **A**in't **M**arkup **L**anguage*
--   **Document Settings:** YAML sets up document settings like *title*, *author*, and *output format*.
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.incremental}
+-   **Document settings:** YAML sets up document settings like *title*, *author*, and *output format*.
 -   **Customization:** Use YAML for themes and styling.
--   [**Themes**](https://quarto.org/docs/output-formats/html-themes.html): e.g., `defaul`, `morph` or `pulse`
+-   Specify [themes](https://quarto.org/docs/output-formats/html-themes.html): for example, "default" or "morph"
 :::
-:::
-
-::: {.column width="50%"}
-::: fragment
+::::
+:::: {.column width="50%"}
+::: {.fragment}
 ### Examples
 
-``` yaml
+```yaml
 ---
 title: "Document title"
 author: "Your Name"
@@ -338,10 +410,10 @@ format: pdf
 ```
 :::
 
-::: fragment
+::: {.fragment}
 The YAML header of [these slides](%7B%7B%3C%20var%20source%20%3E%7D%7D/blob/main/index.qmd#L1-L12):
 
-``` yaml
+```yaml
 ---
 title: "{{< var title >}}"
 subtitle: |
@@ -354,13 +426,12 @@ subtitle: |
   {{< var doi-badge >}}
 theme: default
 date: today
----
 ```
 :::
-:::
-:::
+::::
+:::::
 
-::: notes
+::: {.notes}
 -   YAML: Datenformat in konfiguartionsdateien
 -   viele andere Anwendungsmöglichkeiten,
 -   Metadata for files, today only author, title and output format and Theme
@@ -371,35 +442,34 @@ date: today
 Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html), [Dr. Monwinckels - Quartaki - 6 hour introduction ro Quarto](https://drmowinckels.github.io/quartaki/)
 :::
 
-# Task 3
+## Task 4
 
-## Task 3
+1.   Add a YAML header to your Quarto file
+2.   Include **your name**, a **title**, an [**output format**](https://quarto.org/docs/output-formats/all-formats.html) **(e.g., HTML)** and a [**theme**](https://quarto.org/docs/output-formats/html-themes.html)
+3.   **Stage** and **commit** your changes
 
--   Add a YAML header to your file
--   Include **your name**, a **title**, an [**output format**](https://quarto.org/docs/output-formats/all-formats.html) **(e.g., HTML)** and a [**theme**](https://quarto.org/docs/output-formats/html-themes.html)
+When you are done and your Quarto file is rendering properly:
 
-# Code chunks
+4.    **Merge** your `quarto` branch into your main branch
+
+# More features
 
 ## Code chunks
 
-::: columns
-::: {.column width="50%"}
-::: fragment
--   **Executable Code:** Quarto files support code execution during rendering
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.fragment}
+-   **Executable code:** Quarto files support code execution during rendering
 -   Code chunks can be interactive
--   **Customizable Options:** Specify various options for code chunks
--   **Complex Code Supported:** Handle as complex code as needed
+-   **Customizable options:** Specify various options for code chunks
 -   You can also use *inline code*
--   R code enclosed by ```` ```{r} code ``` ````
+-   R code enclosed by: ```` ```{r} code ``` ````
 :::
-:::
-
-::: {.column width="50%"}
-::: fragment
+::::
+:::: {.column width="50%"}
+::: {.fragment}
 ### Examples
-
 #### Input
-
 ```{r}
 #| output: FALSE
 #| label: code-example
@@ -408,8 +478,7 @@ y <- c(2, 4, 1, 3, 5)
 plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
 ```
 :::
-
-::: fragment
+::: {.fragment}
 #### Output
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -421,42 +490,37 @@ y <- c(2, 4, 1, 3, 5)
 plot(x, y, main = "Scatter Plot Example", xlab = "X-Axis", ylab = "Y-Axis")
 ```
 :::
-:::
-:::
+::::
+:::::
 
-## Code chunks
+## Inline code
 
-### Inline code
-
-::: columns
-::: {.column width="50%"}
-::: fragment
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.fragment}
 ### Input
 
-```{markdown}
+```{markdown filename="Code"}
 Number of observations: `r 8*20`
 ```
 :::
-:::
-
-::: {.column width="50%"}
-::: fragment
+::::
+:::: {.column width="50%"}
+::: {.fragment}
 ### Output
 
 Number of observations: `r 8*20`
 :::
-:::
-:::
+::::
+:::::
 
-::: notes
-Code: you dont have to use it for a recipe book but its possible
+::: {.notes}
+Code: you don't have to use it for a recipe book but its possible
 :::
-
-# Extra features
 
 ## Referencing
 
--   You can name objects like figures, tables...
+-   You can name and references objects like figures, tables etc.
 -   For example: @sec-citations (`@sec-citations`)
 
 | Type         | Label Prefix |
@@ -474,9 +538,9 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Citations {#sec-citations}
 
--   Can be added via `Insert` ➡️ `Citation`
--   Can also be added directly with `@`
--   Are stored in [BibTeX](https://www.bibtex.org/) files in your project
+-   Citations can be added via **Insert** > **Citation**
+-   Citations can also be added directly with `@`
+-   References are stored in [BibTeX](https://www.bibtex.org/) files in your project
 
 +----------------------------------------------+--------------------------------------------------------------+
 | Markdown Format                              | Output (author-date format)                                  |
@@ -491,12 +555,12 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 | 38-39 and passim]                            |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
-| ```                                          | Blip blop bloop [@ggseg;@chacon2014].                       |
-| Blip blop bloop [@ggseg; @chacon2014].       |                                                              |
+| ```                                          | Blip blop bloop [@chacon2014].                               |
+| Blip blop bloop [@chacon2014].               |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
-| ```                                          | Mowinckel says blah [-@chacon2014]                           |
-| Mowinckel says blah [-@chacon2014]           |                                                              |
+| ```                                          | Lennart says blah [-@chacon2014]                             |
+| They say blah [-@chacon2014]                 |                                                              |
 | ```                                          |                                                              |
 +----------------------------------------------+--------------------------------------------------------------+
 | ```                                          | @chacon2014 says bloop.                                      |
@@ -512,19 +576,11 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Usescases for researchers
 
--   Reproducible research
+-   Reproducible papers
 -   Data analysis & visualization
 -   Dynamic documents
 -   Presentation slides
 -   Automated reports
-
-::: fragment
-### Publishing reproducible papers {style="text-align: center;"}
-:::
-
-::: fragment
-### Open science! {style="text-align: center;"}
-:::
 
 # Git integration
 
@@ -532,12 +588,12 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ### Features
 
--   **Plain Text Files:** `.qmd` files are plain text, ensuring compatibility with `git diff` for effective version control
+-   **Plain Text Files:** `.qmd` files are plain text, ensuring compatibility with `git diff`
 -   **Branching and Merging:** Use Git's branching and merging capabilities to manage complex document edits.
 -   **Conflict Resolution:** Resolve conflicts efficiently when collaborating on `.qmd` files
 -   **RStudio Integration:** RStudio offers a graphical user interface (GUI) for Git integration
 
-## GitHub actions
+## GitHub Actions
 
 -   **Workflow Automation** Can automate various tasks, including document generation.
 -   **Trigger Events:** Specify events, such as pushes or pull requests, to trigger document generation automatically.
@@ -549,7 +605,12 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 -   [Quartaki](https://drmowinckels.io/quartaki/) by Dr. Mowinckel
 -   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) (Resource Collection)
 
-## Tasks until next week
+## References
+
+::: {#refs}
+:::
+
+## Tasks until next session
 
 1.  Ensure you have a Git repository named `recipes` set up on your computer
 2.  Inside the repository have a `recipes.qmd` file and (optionally) a `.gitignore` file
@@ -558,31 +619,3 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 If you've done this, you're all set!
 
 # Questions?
-
-## Questions and Answers
-
-::: columns
-::: {.column width="35%"}
-![](images/photo-wittkuhn-uhh.jpg)
-
-#### Dr. Lennart Wittkuhn
-
-{{< fa envelope >}} [{{< var email >}}](%7B%7B%3C%20var%20mailto%20%3E%7D%7D)<br> {{< fa home-user >}} [{{< var homepage >}}](%7B%7B%3C%20var%20homepage%20%3E%7D%7D)<br> {{< fa brands github >}} [GitHub](%7B%7B%3C%20var%20github%20%3E%7D%7D) {{< fa brands mastodon >}} [Mastodon](%7B%7B%3C%20var%20mastodon%20%3E%7D%7D) {{< fa brands twitter >}} [Twitter](%7B%7B%3C%20var%20twitter%20%3E%7D%7D)
-:::
-
-::: {.column width="40%"}
-{{< fa image >}} **Images:** [Scriberia with The Turing Way community](https://doi.org/10.5281/zenodo.3332807) (License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))
-
-:computer: **Slides:** Slides are publicly available at [{{< var website >}}](%7B%7B%3C%20var%20website%20%3E%7D%7D)
-
-{{< fa brands github >}} **Source:** Source code is available at [{{< var source >}}](%7B%7B%3C%20var%20source%20%3E%7D%7D)
-
-{{< fa brands github >}} **Source:** Source code is available at [{{< var source >}}](%7B%7B%3C%20var%20source%20%3E%7D%7D)
-
-:trackball: **DOI:** [10.5281/zenodo.8296951](https://zenodo.org/badge/latestdoi/682015737) (generated using GitHub + [Zenodo](https://zenodo.org/), see [GitHub docs](https://guides.github.com/activities/citable-code/))
-
-{{< fa scale-balanced >}} **License:** {{< var license-long >}}
-
-:speech_balloon: **Contact:** I welcome any feedback via [email](%7B%7B%3C%20var%20mailto%20%3E%7D%7D) or [GitHub issues](%7B%7B%3C%20var%20issues%20%3E%7D%7D). Thank you!
-:::
-:::

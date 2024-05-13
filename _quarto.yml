@@ -14,7 +14,7 @@ author:
     literal: Dr. Lennart Wittkuhn
   url: "{{< var homepage >}}"
   email: "{{< var email >}}"
-  # orcid: "{{< var orcid >}}"
+  orcid: "{{< var orcid >}}"
   # note: string
   # acknowledgements: string
   attributes:
@@ -32,6 +32,7 @@ author:
     family: Pagenstedt
     literal: Konrad Pagenstedt
   email: "konrad.pagenstedt@studium.uni-hamburg.de"
+  orcid: 0009-0000-6867-1546
   # note: string
   # acknowledgements: string
   attributes:
@@ -49,8 +50,8 @@ format:
     smooth-scroll: true
     html-math-method: katex
     email-obfuscation: none
-    toc: false
-    toc-depth: 2
+    toc: true
+    toc-depth: 1
     toc-title: "Agenda"
     number-sections: false
     scrollable: true

@@ -1,0 +1,59 @@
+---
+title: "Delicious Burger Recipe"
+author: "Gourmet Chef"
+date: "2024-05-07"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    theme: solar
+---
+
+# Delicious Burger Recipe
+
+## Ingredients
+
+- **500g** ground beef
+- **4** hamburger buns
+- **4** slices of cheddar cheese
+- **1** tomato, sliced
+- **Lettuce** leaves
+- **1** onion, sliced
+- **Ketchup, mustard, and mayonnaise**
+- **Salt and pepper** to taste
+
+## Instructions
+
+1. **Prepare the Ingredients**:
+   - Slice the tomato and onion.
+   - Wash the lettuce leaves.
+
+2. **Shape the Patties**:
+   - Season the ground beef with salt and pepper.
+   - Divide the beef into four equal portions and shape into patties.
+
+3. **Cook the Patties**:
+   - Heat a grill or skillet over medium-high heat.
+   - Cook the patties for about 4 minutes on each side or until desired doneness.
+
+4. **Assemble the Burgers**:
+   - Toast the buns lightly on the grill or skillet.
+   - Spread ketchup, mustard, and mayonnaise on the buns.
+   - Place a patty on each bun bottom, top with a slice of cheese, tomato, onion, and lettuce.
+   - Cover with the bun tops.
+
+## Serving Suggestions
+
+- Serve the burgers with a side of **french fries** or a **fresh salad**.
+- Enjoy with a cold **beer** or a **soft drink**.
+
+## Nutritional Information
+
+Per Serving:
+- **Calories**: 600
+- **Protein**: 40g
+- **Carbohydrates**: 45g
+- **Fat**: 30g
+
+
