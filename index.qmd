@@ -23,7 +23,7 @@ gt_table_width = 1000
 
 ## Schedule
 
-<iframe src="https://lennartwittkuhn.com/version-control-course-uhh-ws23/schedule.html" width="100%" height="500px">
+<iframe src="https://lennartwittkuhn.com/version-control-course-uhh-ss24/schedule.html" width="100%" height="500px">
 
 </iframe>
 
@@ -40,7 +40,7 @@ gt_table_width = 1000
 
 {{< fa display >}} [https://quarto.org](https://quarto.org)
 ```{=html}
-<iframe width="100%" height="80%" src="https://quarto.org" title="quarto.org"></iframe>
+<iframe width="100%" height="75%" src="https://quarto.org" title="quarto.org"></iframe>
 ```
 
 ## Goals of this session
@@ -67,16 +67,12 @@ gt_table_width = 1000
 See <https://lennartwittkuhn.com/recipes/>
 :::
 
-## Task 1
-
-Create a new `quarto` branch in your recipe repository and switch to it
-
 # Introduction to Quarto
 
 ## What is Quarto?
 
-::: columns
-::: {.column width="50%"}
+::::: {.columns}
+:::: {.column width="50%"}
 ::: {.fragment}
 ### "Publishing system" by Posit [^1]
 
@@ -85,9 +81,8 @@ Create a new `quarto` branch in your recipe repository and switch to it
 -   Supports multiple programming languages
 -   Integrated in RStudio
 :::
-:::
-
-::: {.column width="50%"}
+::::
+:::: {.column width="50%"}
 ::: {.fragment}
 ### Usecases
 
@@ -96,12 +91,10 @@ Create a new `quarto` branch in your recipe repository and switch to it
 -   **Presentations**
 -   [Books](https://lennartwittkuhn.com/version-control-book/)
 :::
-:::
-:::
+::::
+:::::
 
-::: {.fragment}
-![Image from [Hello Quarto Presentation](https://mine.quarto.pub/hello-quarto/#/publishing-system-2) from  [Mine Çetinkaya-Rundel PhD](https://mine-cr.com)](images/quarto_illustration.png){#fig-quartowidth="20%"}
-:::
+![A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto. Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel. Illustrated by Allison Horst ([Source](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)).](images/quarto-illustration.png){#fig-quarto width="80%"}
 
 [^1]: (the company formerly known as RStudio)
 
@@ -113,51 +106,10 @@ Create a new `quarto` branch in your recipe repository and switch to it
 -   publishing system = creating layout of text media and code
 :::
 
-## Markdown
-
-::: columns
-::: {.column width="50%"}
-::: {.incremental}
--   Easy to use
--   "Markup" language
--   Content and formatting are *integrated*, not separated
--   Alternative to "What You See Is What You Get" (WYSIWYG) editors like MS Word
--   Used by text editors, GitHub (e.g., READMEs), and more
--   Integrated in RStudio as "RMarkdown"
-:::
-:::
-
-::: {.column width="50%"}
-::: {.fragment}
-### Example: [HedgeDoc](https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w?both)
-
-<iframe src="https://hedgedoc.org" width="100%" height="500px">
-
-</iframe>
-:::
-:::
-:::
-
-::: notes
--   Markup Language = text encoding system readable by machine
--   Pros:
-    -   easier to use for quick notes
-    -   faster to write since format and content intertwined
-    -   version control
-    -   faster
-    -   less loading
--   Cons:
-    -   less formatting options since its intentionally simple, e.g. tables pretty complex to do, or pictures less intuitive (once used to word)
--   Used by: GitHub, Slack Discord, Reddit Hedgedoc = open source markdown editor
--   Formerly knows as CodiMD
--   RMarkdown: designed to be used with R from Rstudio
--   integration of R code, create documents which include code, widely used in scientific community
-:::
-
 ## Getting started with Quarto
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="40%"}
 ::: fragment
 ### How can you work with Quarto?
 
@@ -171,7 +123,7 @@ You can use one of the following editors:
 :::
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 ::: {.fragment}
 ### Creating a Quarto file in RStudio
 
@@ -213,7 +165,7 @@ You can use one of the following editors:
 #### 1. Preview
 ```{zsh filename="Code"}
 #| eval: false
-quarto preview document.qmd
+quarto preview
 ```
 
 - The document will be rendered and a web browser with a "live preview" opened
@@ -242,15 +194,62 @@ quarto render
 ::::
 :::::
 
-## Task 2
+## Your turn
 
--   Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
--   Write a **short introduction note** to your new recipe book
--   Switch between visual and source mode
--   Render the file to HTML
-- **Stage** and **Commit** your new file
+### Task 1
 
-# Markdown basics
+1. Create a new `quarto` branch in your `recipes` repository and switch to it
+
+### Task 2
+
+1.    Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
+1.    Write a **short introduction note** to your new recipe book
+1.    Switch between Quarto's visual and source mode
+1.    Render the file to HTML
+1.    **Stage** and **commit** your new file
+
+# Basics of Markdown
+
+## Markdown
+
+::: columns
+::: {.column width="50%"}
+::: {.incremental}
+-   Easy to use
+-   "Markup" language
+-   Content and formatting are *integrated*, not separated
+-   Alternative to "What You See Is What You Get" (WYSIWYG) editors like MS Word
+-   Used by text editors, GitHub (e.g., READMEs), and more
+-   Integrated in RStudio as "RMarkdown"
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+### Example: [HedgeDoc](https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w?both)
+
+<iframe src="https://hedgedoc.org" width="100%" height="500px">
+
+</iframe>
+:::
+:::
+:::
+
+::: notes
+-   Markup Language = text encoding system readable by machine
+-   Pros:
+    -   easier to use for quick notes
+    -   faster to write since format and content intertwined
+    -   version control
+    -   faster
+    -   less loading
+-   Cons:
+    -   less formatting options since its intentionally simple, e.g. tables pretty complex to do, or pictures less intuitive (once used to word)
+-   Used by: GitHub, Slack Discord, Reddit Hedgedoc = open source markdown editor
+-   Formerly knows as CodiMD
+-   RMarkdown: designed to be used with R from Rstudio
+-   integration of R code, create documents which include code, widely used in scientific community
+:::
 
 ## Text Formatting
 
@@ -383,7 +382,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 1.    **Add a recipe** to the `recipes.qmd` file (quickly copy-paste from the web)
 1.    Format the text by applying at least **three types of Markdown syntax**
-1.    **Stage** and **commit** your changes (as usual)
+1.    **Stage** and **commit** your changes
 
 # The YAML header
 
@@ -454,7 +453,7 @@ When you are done and your Quarto file is rendering properly:
 
 4.    **Merge** your `quarto` branch into your main branch
 
-# Code chunks
+# More features
 
 ## Code chunks
 
@@ -519,8 +518,6 @@ Number of observations: `r 8*20`
 ::: {.notes}
 Code: you don't have to use it for a recipe book but its possible
 :::
-
-# More features
 
 ## Referencing
 
