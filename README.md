@@ -1,17 +1,15 @@
 # Quarto Presentation
 
-[![Quarto Publish](https://github.com/lnnrtwttkhn/quarto-presentation/actions/workflows/publish.yml/badge.svg)](https://github.com/lnnrtwttkhn/quarto-presentation/actions/workflows/publish.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## About
-
-This template repository contains code to quickly set up a new presentation with Quarto.
-Just click the green **Use this template** button to get started.
+[![Quarto Publish](https://github.com/lnnrtwttkhn/quarto-workshop/actions/workflows/publish.yml/badge.svg)](https://github.com/lnnrtwttkhn/quarto-workshop/actions/workflows/publish.yml)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Codespell](https://github.com/lnnrtwttkhn/quarto-workshop/actions/workflows/codespell.yml/badge.svg)](https://github.com/lnnrtwttkhn/quarto-workshop/actions/workflows/codespell.yml)
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Contributors
 
 [Lennart Wittkuhn](mailto:lennart.wittkuhn@uni-hamburg.de)
+
+[Konrad Pagenstedt](mailto:konrad.pagenstedt@studium.uni-hamburg.de)
