@@ -203,7 +203,7 @@ quarto render
 ### Task 2
 
 1.    Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
-1.    Write a **short introduction note** to your new recipe book
+1.    Write a **short introduction note** to your recipes repository
 1.    Switch between Quarto's visual and source mode
 1.    Render the file to HTML
 1.    **Stage** and **commit** your new file
