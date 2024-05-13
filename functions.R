@@ -11,3 +11,10 @@ make_table <- function(name) {
     subset(., select = c(Input, Output))
   return(df)
 }
+
+gt_theme <- function(df) {
+  df <- df |> 
+    tab_style(style = cell_text(color = "black"), locations = cells_column_labels()) |>
+    tab_style(style = cell_fill(color = "lightgray"), locations = cells_column_labels())
+  return(df)
+}
