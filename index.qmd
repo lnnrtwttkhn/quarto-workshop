@@ -170,7 +170,9 @@ quarto preview
 
 - The document will be rendered and a web browser with a "live preview" opened
 - Position this browser so that you can see it as you edit and save the document
-- Every time you save the preview will be automatically updated
+- Every time you save, the preview will be updated
+- Windows Users: Note, that `quarto preview` might not work in Git Bash!
+Use the `Render` buttons in RStudio (see right column)
 
 :::
 ::: {.fragment}
