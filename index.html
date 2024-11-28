@@ -6,11 +6,10 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.6.39">
 
   <meta name="author" content="Dr.&nbsp;Lennart Wittkuhn">
   <meta name="author" content="Konrad Pagenstedt">
@@ -46,7 +45,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -74,7 +73,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -88,7 +87,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -119,8 +118,8 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-c84a10cbf01bc937978ad087c2529513.css">
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -135,7 +134,7 @@
    });
 }}});
   </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -143,204 +142,6 @@
   <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style>html{ scroll-behavior: smooth; }</style>
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -534,7 +335,6 @@ Konrad Pagenstedt <a href="https://orcid.org/0009-0000-6867-1546" class="quarto-
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="publishing-system-by-posit-1">“Publishing system” by Posit <a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></h3>
 <ul>
 <li>Based on RMarkdown</li>
@@ -545,7 +345,6 @@ Konrad Pagenstedt <a href="https://orcid.org/0009-0000-6867-1546" class="quarto-
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="usecases">Usecases</h3>
 <ul>
 <li><a href="https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html">Articles/Reports</a></li>
@@ -554,9 +353,8 @@ Konrad Pagenstedt <a href="https://orcid.org/0009-0000-6867-1546" class="quarto-
 <li><a href="https://lennartwittkuhn.com/version-control-book/">Books</a></li>
 </ul>
 </div>
-</div>
-</div>
-<div id="fig-quarto" class="quarto-figure quarto-figure-center quarto-float">
+</div></div>
+<div id="fig-quarto" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/quarto-illustration.png" style="width:80.0%">
@@ -591,7 +389,6 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="fragment">
-<!-- -->
 <h3 id="how-can-you-work-with-quarto">How can you work with Quarto?</h3>
 <p>You can use one of the following editors:</p>
 <ul>
@@ -604,7 +401,6 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </div>
 </div><div class="column" style="width:60%;">
 <div class="fragment">
-<!-- -->
 <h3 id="creating-a-quarto-file-in-rstudio">Creating a Quarto file in RStudio</h3>
 <ol type="1">
 <li>Download and install <a href="https://posit.co/download/rstudio-desktop/">the newest version of RStudio</a></li>
@@ -612,15 +408,13 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 <li>Create a new <code>.qmd</code> file: “File” &gt; “New file” &gt; “Quarto Document”</li>
 </ol>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="rendering-quarto-files" class="slide level2">
 <h2>Rendering Quarto files</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="output-formats">Output formats</h3>
 <ul>
 <li><strong>HTML (standard)</strong></li>
@@ -630,22 +424,19 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="presentations">Presentations</h3>
 <ul>
 <li>reveal.js (HTML)</li>
 <li>Powerpoint (requires MS Powerpoint)</li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="how-to-render-quarto-files" class="slide level2">
 <h2>How to render Quarto files</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h4 id="preview">1. Preview</h4>
 <div class="cell">
 <div class="code-with-filename">
@@ -658,7 +449,8 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 <ul>
 <li>The document will be rendered and a web browser with a “live preview” opened</li>
 <li>Position this browser so that you can see it as you edit and save the document</li>
-<li>Every time you save the preview will be automatically updated</li>
+<li>Every time you save, the preview will be updated</li>
+<li>Windows Users: Note, that <code>quarto preview</code> might not work in Git Bash! Use the <code>Render</code> buttons in RStudio (see right column)</li>
 </ul>
 </div>
 <div class="fragment">
@@ -666,7 +458,6 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h4 id="render">2. Render</h4>
 <div class="cell">
 <div class="code-with-filename">
@@ -682,15 +473,18 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </ul>
 <p><img data-src="images/rstudio-render.png"> <img data-src="images/rstudio-render-on-save.png"></p>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="your-turn" class="slide level2 scrollable">
 <h2>Your turn</h2>
+<div class="fragment">
 <h3 id="task-1">Task 1</h3>
 <ol type="1">
 <li>Create a new <code>quarto</code> branch in your <code>recipes</code> repository and switch to it</li>
 </ol>
+<p>Remember, that <code>quarto</code> is just a branch name here. You can also choose a different name for the branch if you want to.</p>
+</div>
+<div class="fragment">
 <h3 id="task-2">Task 2</h3>
 <ol type="1">
 <li>Create a new <strong>empty Quarto file</strong> called <code>recipes.qmd</code> in RStudio and save it in your <code>recipes</code> repository</li>
@@ -698,6 +492,23 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 <li>Switch between Quarto’s visual and source mode</li>
 <li>Render the file to HTML</li>
 <li><strong>Stage</strong> and <strong>commit</strong> your new file</li>
+</ol>
+</div>
+</section>
+<section id="your-turn-1" class="slide level2 scrollable">
+<h2>Your turn</h2>
+<h3 id="task-2.1">Task 2.1</h3>
+<p>Quarto and RStudio might create a bunch of extra files:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">.Rproj.user</span></span>
+<span id="cb3-2"><a></a><span class="ex">.Rhistory</span></span>
+<span id="cb3-3"><a></a><span class="ex">.RData</span></span>
+<span id="cb3-4"><a></a><span class="ex">.Ruserdata</span></span>
+<span id="cb3-5"><a></a><span class="ex">/_site/</span></span>
+<span id="cb3-6"><a></a><span class="ex">/.quarto/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The are temporary or user specific files and should therefore <strong>not be tracked in Git</strong>.</p>
+<ol type="1">
+<li>Add any file that is not the <code>.qmd</code> file to your <code>.gitignore</code> file.</li>
+<li>Stage and commit the changes to your <code>.gitignore</code> file.</li>
 </ol>
 </section></section>
 <section>
@@ -721,13 +532,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="example-hedgedoc">Example: <a href="https://pad.uni-hamburg.de/5DfbDxjNS_isWT8_S0S-2w?both">HedgeDoc</a></h3>
 <iframe src="https://hedgedoc.org" width="100%" height="500px">
 </iframe>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>Markup Language = text encoding system readable by machine</li>
@@ -764,24 +573,23 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 <h2>Text Formatting</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<div id="knbnojejfv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#knbnojejfv table {
+<div id="vkayuexmbt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vkayuexmbt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#knbnojejfv thead, #knbnojejfv tbody, #knbnojejfv tfoot, #knbnojejfv tr, #knbnojejfv td, #knbnojejfv th {
+#vkayuexmbt thead, #vkayuexmbt tbody, #vkayuexmbt tfoot, #vkayuexmbt tr, #vkayuexmbt td, #vkayuexmbt th {
   border-style: none;
 }
 
-#knbnojejfv p {
+#vkayuexmbt p {
   margin: 0;
   padding: 0;
 }
 
-#knbnojejfv .gt_table {
+#vkayuexmbt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -807,12 +615,12 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-left-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_caption {
+#vkayuexmbt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#knbnojejfv .gt_title {
+#vkayuexmbt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -824,7 +632,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-width: 0;
 }
 
-#knbnojejfv .gt_subtitle {
+#vkayuexmbt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -836,7 +644,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-top-width: 0;
 }
 
-#knbnojejfv .gt_heading {
+#vkayuexmbt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -848,13 +656,13 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_bottom_border {
+#vkayuexmbt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_col_headings {
+#vkayuexmbt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -869,7 +677,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_col_heading {
+#vkayuexmbt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -889,7 +697,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   overflow-x: hidden;
 }
 
-#knbnojejfv .gt_column_spanner_outer {
+#vkayuexmbt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -901,15 +709,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 4px;
 }
 
-#knbnojejfv .gt_column_spanner_outer:first-child {
+#vkayuexmbt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#knbnojejfv .gt_column_spanner_outer:last-child {
+#vkayuexmbt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#knbnojejfv .gt_column_spanner {
+#vkayuexmbt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -921,11 +729,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   width: 100%;
 }
 
-#knbnojejfv .gt_spanner_row {
+#vkayuexmbt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#knbnojejfv .gt_group_heading {
+#vkayuexmbt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -951,7 +759,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   text-align: left;
 }
 
-#knbnojejfv .gt_empty_group_heading {
+#vkayuexmbt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -966,15 +774,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   vertical-align: middle;
 }
 
-#knbnojejfv .gt_from_md > :first-child {
+#vkayuexmbt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#knbnojejfv .gt_from_md > :last-child {
+#vkayuexmbt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#knbnojejfv .gt_row {
+#vkayuexmbt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -993,7 +801,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   overflow-x: hidden;
 }
 
-#knbnojejfv .gt_stub {
+#vkayuexmbt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1006,7 +814,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#knbnojejfv .gt_stub_row_group {
+#vkayuexmbt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1020,15 +828,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   vertical-align: top;
 }
 
-#knbnojejfv .gt_row_group_first td {
+#vkayuexmbt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#knbnojejfv .gt_row_group_first th {
+#vkayuexmbt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#knbnojejfv .gt_summary_row {
+#vkayuexmbt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1038,16 +846,16 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#knbnojejfv .gt_first_summary_row {
+#vkayuexmbt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_first_summary_row.thick {
+#vkayuexmbt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#knbnojejfv .gt_last_summary_row {
+#vkayuexmbt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1057,7 +865,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_grand_summary_row {
+#vkayuexmbt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1067,7 +875,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#knbnojejfv .gt_first_grand_summary_row {
+#vkayuexmbt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1077,7 +885,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-top-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_last_grand_summary_row_top {
+#vkayuexmbt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1087,11 +895,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_striped {
+#vkayuexmbt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#knbnojejfv .gt_table_body {
+#vkayuexmbt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1100,7 +908,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_footnotes {
+#vkayuexmbt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1114,7 +922,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_footnote {
+#vkayuexmbt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1123,7 +931,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#knbnojejfv .gt_sourcenotes {
+#vkayuexmbt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1137,7 +945,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#knbnojejfv .gt_sourcenote {
+#vkayuexmbt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1145,74 +953,74 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#knbnojejfv .gt_left {
+#vkayuexmbt .gt_left {
   text-align: left;
 }
 
-#knbnojejfv .gt_center {
+#vkayuexmbt .gt_center {
   text-align: center;
 }
 
-#knbnojejfv .gt_right {
+#vkayuexmbt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#knbnojejfv .gt_font_normal {
+#vkayuexmbt .gt_font_normal {
   font-weight: normal;
 }
 
-#knbnojejfv .gt_font_bold {
+#vkayuexmbt .gt_font_bold {
   font-weight: bold;
 }
 
-#knbnojejfv .gt_font_italic {
+#vkayuexmbt .gt_font_italic {
   font-style: italic;
 }
 
-#knbnojejfv .gt_super {
+#vkayuexmbt .gt_super {
   font-size: 65%;
 }
 
-#knbnojejfv .gt_footnote_marks {
+#vkayuexmbt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#knbnojejfv .gt_asterisk {
+#vkayuexmbt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#knbnojejfv .gt_indent_1 {
+#vkayuexmbt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#knbnojejfv .gt_indent_2 {
+#vkayuexmbt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#knbnojejfv .gt_indent_3 {
+#vkayuexmbt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#knbnojejfv .gt_indent_4 {
+#vkayuexmbt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#knbnojejfv .gt_indent_5 {
+#vkayuexmbt .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
 </colgroup>
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="Input" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Input</th>
 <th id="Output" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Output</th>
 </tr>
@@ -1240,7 +1048,6 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </div>
 </div>
 </div>
-</div>
 <div class="footer">
 <p>Sources: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a>, <a href="https://drmowinckels.github.io/quartaki/">Dr.&nbsp;Monwinckels - Quartaki - 6 hour introduction ro Quarto</a></p>
 </div>
@@ -1249,24 +1056,23 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 <h2>Headings</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<div id="xuqrqwecdi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xuqrqwecdi table {
+<div id="ophpqzyscf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ophpqzyscf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xuqrqwecdi thead, #xuqrqwecdi tbody, #xuqrqwecdi tfoot, #xuqrqwecdi tr, #xuqrqwecdi td, #xuqrqwecdi th {
+#ophpqzyscf thead, #ophpqzyscf tbody, #ophpqzyscf tfoot, #ophpqzyscf tr, #ophpqzyscf td, #ophpqzyscf th {
   border-style: none;
 }
 
-#xuqrqwecdi p {
+#ophpqzyscf p {
   margin: 0;
   padding: 0;
 }
 
-#xuqrqwecdi .gt_table {
+#ophpqzyscf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1292,12 +1098,12 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-left-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_caption {
+#ophpqzyscf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xuqrqwecdi .gt_title {
+#ophpqzyscf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1309,7 +1115,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-width: 0;
 }
 
-#xuqrqwecdi .gt_subtitle {
+#ophpqzyscf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1321,7 +1127,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-top-width: 0;
 }
 
-#xuqrqwecdi .gt_heading {
+#ophpqzyscf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1333,13 +1139,13 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_bottom_border {
+#ophpqzyscf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_col_headings {
+#ophpqzyscf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1354,7 +1160,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_col_heading {
+#ophpqzyscf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1374,7 +1180,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   overflow-x: hidden;
 }
 
-#xuqrqwecdi .gt_column_spanner_outer {
+#ophpqzyscf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1386,15 +1192,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 4px;
 }
 
-#xuqrqwecdi .gt_column_spanner_outer:first-child {
+#ophpqzyscf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xuqrqwecdi .gt_column_spanner_outer:last-child {
+#ophpqzyscf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xuqrqwecdi .gt_column_spanner {
+#ophpqzyscf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1406,11 +1212,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   width: 100%;
 }
 
-#xuqrqwecdi .gt_spanner_row {
+#ophpqzyscf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xuqrqwecdi .gt_group_heading {
+#ophpqzyscf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1436,7 +1242,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   text-align: left;
 }
 
-#xuqrqwecdi .gt_empty_group_heading {
+#ophpqzyscf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1451,15 +1257,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   vertical-align: middle;
 }
 
-#xuqrqwecdi .gt_from_md > :first-child {
+#ophpqzyscf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xuqrqwecdi .gt_from_md > :last-child {
+#ophpqzyscf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xuqrqwecdi .gt_row {
+#ophpqzyscf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1478,7 +1284,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   overflow-x: hidden;
 }
 
-#xuqrqwecdi .gt_stub {
+#ophpqzyscf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1491,7 +1297,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#xuqrqwecdi .gt_stub_row_group {
+#ophpqzyscf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1505,15 +1311,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   vertical-align: top;
 }
 
-#xuqrqwecdi .gt_row_group_first td {
+#ophpqzyscf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xuqrqwecdi .gt_row_group_first th {
+#ophpqzyscf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xuqrqwecdi .gt_summary_row {
+#ophpqzyscf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1523,16 +1329,16 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#xuqrqwecdi .gt_first_summary_row {
+#ophpqzyscf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_first_summary_row.thick {
+#ophpqzyscf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xuqrqwecdi .gt_last_summary_row {
+#ophpqzyscf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1542,7 +1348,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_grand_summary_row {
+#ophpqzyscf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1552,7 +1358,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#xuqrqwecdi .gt_first_grand_summary_row {
+#ophpqzyscf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1562,7 +1368,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-top-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_last_grand_summary_row_top {
+#ophpqzyscf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1572,11 +1378,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_striped {
+#ophpqzyscf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xuqrqwecdi .gt_table_body {
+#ophpqzyscf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1585,7 +1391,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_footnotes {
+#ophpqzyscf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1599,7 +1405,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_footnote {
+#ophpqzyscf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1608,7 +1414,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#xuqrqwecdi .gt_sourcenotes {
+#ophpqzyscf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1622,7 +1428,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#xuqrqwecdi .gt_sourcenote {
+#ophpqzyscf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1630,74 +1436,74 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#xuqrqwecdi .gt_left {
+#ophpqzyscf .gt_left {
   text-align: left;
 }
 
-#xuqrqwecdi .gt_center {
+#ophpqzyscf .gt_center {
   text-align: center;
 }
 
-#xuqrqwecdi .gt_right {
+#ophpqzyscf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xuqrqwecdi .gt_font_normal {
+#ophpqzyscf .gt_font_normal {
   font-weight: normal;
 }
 
-#xuqrqwecdi .gt_font_bold {
+#ophpqzyscf .gt_font_bold {
   font-weight: bold;
 }
 
-#xuqrqwecdi .gt_font_italic {
+#ophpqzyscf .gt_font_italic {
   font-style: italic;
 }
 
-#xuqrqwecdi .gt_super {
+#ophpqzyscf .gt_super {
   font-size: 65%;
 }
 
-#xuqrqwecdi .gt_footnote_marks {
+#ophpqzyscf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xuqrqwecdi .gt_asterisk {
+#ophpqzyscf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xuqrqwecdi .gt_indent_1 {
+#ophpqzyscf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xuqrqwecdi .gt_indent_2 {
+#ophpqzyscf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xuqrqwecdi .gt_indent_3 {
+#ophpqzyscf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xuqrqwecdi .gt_indent_4 {
+#ophpqzyscf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xuqrqwecdi .gt_indent_5 {
+#ophpqzyscf .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
 </colgroup>
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="Input" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Input</th>
 <th id="Output" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Output</th>
 </tr>
@@ -1733,7 +1539,6 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </div>
 </div>
 </div>
-</div>
 <div class="footer">
 <p>Sources: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a>, <a href="https://drmowinckels.github.io/quartaki/">Dr.&nbsp;Monwinckels - Quartaki - 6 hour introduction ro Quarto</a></p>
 </div>
@@ -1742,24 +1547,23 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 <h2>Lists</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<div id="aqflvahlze" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aqflvahlze table {
+<div id="eviqwrfwjo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#eviqwrfwjo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aqflvahlze thead, #aqflvahlze tbody, #aqflvahlze tfoot, #aqflvahlze tr, #aqflvahlze td, #aqflvahlze th {
+#eviqwrfwjo thead, #eviqwrfwjo tbody, #eviqwrfwjo tfoot, #eviqwrfwjo tr, #eviqwrfwjo td, #eviqwrfwjo th {
   border-style: none;
 }
 
-#aqflvahlze p {
+#eviqwrfwjo p {
   margin: 0;
   padding: 0;
 }
 
-#aqflvahlze .gt_table {
+#eviqwrfwjo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1785,12 +1589,12 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-left-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_caption {
+#eviqwrfwjo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aqflvahlze .gt_title {
+#eviqwrfwjo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1802,7 +1606,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-width: 0;
 }
 
-#aqflvahlze .gt_subtitle {
+#eviqwrfwjo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1814,7 +1618,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-top-width: 0;
 }
 
-#aqflvahlze .gt_heading {
+#eviqwrfwjo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1826,13 +1630,13 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_bottom_border {
+#eviqwrfwjo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_col_headings {
+#eviqwrfwjo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1847,7 +1651,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_col_heading {
+#eviqwrfwjo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1867,7 +1671,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   overflow-x: hidden;
 }
 
-#aqflvahlze .gt_column_spanner_outer {
+#eviqwrfwjo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1879,15 +1683,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 4px;
 }
 
-#aqflvahlze .gt_column_spanner_outer:first-child {
+#eviqwrfwjo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aqflvahlze .gt_column_spanner_outer:last-child {
+#eviqwrfwjo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aqflvahlze .gt_column_spanner {
+#eviqwrfwjo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1899,11 +1703,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   width: 100%;
 }
 
-#aqflvahlze .gt_spanner_row {
+#eviqwrfwjo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aqflvahlze .gt_group_heading {
+#eviqwrfwjo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1929,7 +1733,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   text-align: left;
 }
 
-#aqflvahlze .gt_empty_group_heading {
+#eviqwrfwjo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1944,15 +1748,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   vertical-align: middle;
 }
 
-#aqflvahlze .gt_from_md > :first-child {
+#eviqwrfwjo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aqflvahlze .gt_from_md > :last-child {
+#eviqwrfwjo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aqflvahlze .gt_row {
+#eviqwrfwjo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1971,7 +1775,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   overflow-x: hidden;
 }
 
-#aqflvahlze .gt_stub {
+#eviqwrfwjo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1984,7 +1788,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#aqflvahlze .gt_stub_row_group {
+#eviqwrfwjo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1998,15 +1802,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   vertical-align: top;
 }
 
-#aqflvahlze .gt_row_group_first td {
+#eviqwrfwjo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aqflvahlze .gt_row_group_first th {
+#eviqwrfwjo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aqflvahlze .gt_summary_row {
+#eviqwrfwjo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2016,16 +1820,16 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#aqflvahlze .gt_first_summary_row {
+#eviqwrfwjo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_first_summary_row.thick {
+#eviqwrfwjo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aqflvahlze .gt_last_summary_row {
+#eviqwrfwjo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2035,7 +1839,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_grand_summary_row {
+#eviqwrfwjo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2045,7 +1849,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#aqflvahlze .gt_first_grand_summary_row {
+#eviqwrfwjo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2055,7 +1859,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-top-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_last_grand_summary_row_top {
+#eviqwrfwjo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2065,11 +1869,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_striped {
+#eviqwrfwjo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aqflvahlze .gt_table_body {
+#eviqwrfwjo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2078,7 +1882,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_footnotes {
+#eviqwrfwjo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2092,7 +1896,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_footnote {
+#eviqwrfwjo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2101,7 +1905,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#aqflvahlze .gt_sourcenotes {
+#eviqwrfwjo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2115,7 +1919,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#aqflvahlze .gt_sourcenote {
+#eviqwrfwjo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2123,74 +1927,74 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#aqflvahlze .gt_left {
+#eviqwrfwjo .gt_left {
   text-align: left;
 }
 
-#aqflvahlze .gt_center {
+#eviqwrfwjo .gt_center {
   text-align: center;
 }
 
-#aqflvahlze .gt_right {
+#eviqwrfwjo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aqflvahlze .gt_font_normal {
+#eviqwrfwjo .gt_font_normal {
   font-weight: normal;
 }
 
-#aqflvahlze .gt_font_bold {
+#eviqwrfwjo .gt_font_bold {
   font-weight: bold;
 }
 
-#aqflvahlze .gt_font_italic {
+#eviqwrfwjo .gt_font_italic {
   font-style: italic;
 }
 
-#aqflvahlze .gt_super {
+#eviqwrfwjo .gt_super {
   font-size: 65%;
 }
 
-#aqflvahlze .gt_footnote_marks {
+#eviqwrfwjo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aqflvahlze .gt_asterisk {
+#eviqwrfwjo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aqflvahlze .gt_indent_1 {
+#eviqwrfwjo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aqflvahlze .gt_indent_2 {
+#eviqwrfwjo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aqflvahlze .gt_indent_3 {
+#eviqwrfwjo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aqflvahlze .gt_indent_4 {
+#eviqwrfwjo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aqflvahlze .gt_indent_5 {
+#eviqwrfwjo .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
 </colgroup>
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="Input" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Input</th>
 <th id="Output" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Output</th>
 </tr>
@@ -2241,7 +2045,6 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </div>
 </div>
 </div>
-</div>
 <div class="footer">
 <p>Sources: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a>, <a href="https://drmowinckels.github.io/quartaki/">Dr.&nbsp;Monwinckels - Quartaki - 6 hour introduction ro Quarto</a></p>
 </div>
@@ -2250,24 +2053,23 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 <h2>Tables</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<div id="ffnvzgjyje" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ffnvzgjyje table {
+<div id="lkwefibnfe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lkwefibnfe table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ffnvzgjyje thead, #ffnvzgjyje tbody, #ffnvzgjyje tfoot, #ffnvzgjyje tr, #ffnvzgjyje td, #ffnvzgjyje th {
+#lkwefibnfe thead, #lkwefibnfe tbody, #lkwefibnfe tfoot, #lkwefibnfe tr, #lkwefibnfe td, #lkwefibnfe th {
   border-style: none;
 }
 
-#ffnvzgjyje p {
+#lkwefibnfe p {
   margin: 0;
   padding: 0;
 }
 
-#ffnvzgjyje .gt_table {
+#lkwefibnfe .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2293,12 +2095,12 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-left-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_caption {
+#lkwefibnfe .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ffnvzgjyje .gt_title {
+#lkwefibnfe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2310,7 +2112,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-width: 0;
 }
 
-#ffnvzgjyje .gt_subtitle {
+#lkwefibnfe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2322,7 +2124,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-top-width: 0;
 }
 
-#ffnvzgjyje .gt_heading {
+#lkwefibnfe .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2334,13 +2136,13 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_bottom_border {
+#lkwefibnfe .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_col_headings {
+#lkwefibnfe .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2355,7 +2157,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_col_heading {
+#lkwefibnfe .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2375,7 +2177,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   overflow-x: hidden;
 }
 
-#ffnvzgjyje .gt_column_spanner_outer {
+#lkwefibnfe .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2387,15 +2189,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 4px;
 }
 
-#ffnvzgjyje .gt_column_spanner_outer:first-child {
+#lkwefibnfe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ffnvzgjyje .gt_column_spanner_outer:last-child {
+#lkwefibnfe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ffnvzgjyje .gt_column_spanner {
+#lkwefibnfe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2407,11 +2209,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   width: 100%;
 }
 
-#ffnvzgjyje .gt_spanner_row {
+#lkwefibnfe .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ffnvzgjyje .gt_group_heading {
+#lkwefibnfe .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2437,7 +2239,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   text-align: left;
 }
 
-#ffnvzgjyje .gt_empty_group_heading {
+#lkwefibnfe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2452,15 +2254,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   vertical-align: middle;
 }
 
-#ffnvzgjyje .gt_from_md > :first-child {
+#lkwefibnfe .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ffnvzgjyje .gt_from_md > :last-child {
+#lkwefibnfe .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ffnvzgjyje .gt_row {
+#lkwefibnfe .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2479,7 +2281,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   overflow-x: hidden;
 }
 
-#ffnvzgjyje .gt_stub {
+#lkwefibnfe .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2492,7 +2294,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#ffnvzgjyje .gt_stub_row_group {
+#lkwefibnfe .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2506,15 +2308,15 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   vertical-align: top;
 }
 
-#ffnvzgjyje .gt_row_group_first td {
+#lkwefibnfe .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ffnvzgjyje .gt_row_group_first th {
+#lkwefibnfe .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ffnvzgjyje .gt_summary_row {
+#lkwefibnfe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2524,16 +2326,16 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#ffnvzgjyje .gt_first_summary_row {
+#lkwefibnfe .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_first_summary_row.thick {
+#lkwefibnfe .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ffnvzgjyje .gt_last_summary_row {
+#lkwefibnfe .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2543,7 +2345,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_grand_summary_row {
+#lkwefibnfe .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2553,7 +2355,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#ffnvzgjyje .gt_first_grand_summary_row {
+#lkwefibnfe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2563,7 +2365,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-top-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_last_grand_summary_row_top {
+#lkwefibnfe .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2573,11 +2375,11 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_striped {
+#lkwefibnfe .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ffnvzgjyje .gt_table_body {
+#lkwefibnfe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2586,7 +2388,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-bottom-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_footnotes {
+#lkwefibnfe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2600,7 +2402,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_footnote {
+#lkwefibnfe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2609,7 +2411,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#ffnvzgjyje .gt_sourcenotes {
+#lkwefibnfe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2623,7 +2425,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   border-right-color: #D3D3D3;
 }
 
-#ffnvzgjyje .gt_sourcenote {
+#lkwefibnfe .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2631,74 +2433,74 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
   padding-right: 5px;
 }
 
-#ffnvzgjyje .gt_left {
+#lkwefibnfe .gt_left {
   text-align: left;
 }
 
-#ffnvzgjyje .gt_center {
+#lkwefibnfe .gt_center {
   text-align: center;
 }
 
-#ffnvzgjyje .gt_right {
+#lkwefibnfe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ffnvzgjyje .gt_font_normal {
+#lkwefibnfe .gt_font_normal {
   font-weight: normal;
 }
 
-#ffnvzgjyje .gt_font_bold {
+#lkwefibnfe .gt_font_bold {
   font-weight: bold;
 }
 
-#ffnvzgjyje .gt_font_italic {
+#lkwefibnfe .gt_font_italic {
   font-style: italic;
 }
 
-#ffnvzgjyje .gt_super {
+#lkwefibnfe .gt_super {
   font-size: 65%;
 }
 
-#ffnvzgjyje .gt_footnote_marks {
+#lkwefibnfe .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ffnvzgjyje .gt_asterisk {
+#lkwefibnfe .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ffnvzgjyje .gt_indent_1 {
+#lkwefibnfe .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ffnvzgjyje .gt_indent_2 {
+#lkwefibnfe .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ffnvzgjyje .gt_indent_3 {
+#lkwefibnfe .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ffnvzgjyje .gt_indent_4 {
+#lkwefibnfe .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ffnvzgjyje .gt_indent_5 {
+#lkwefibnfe .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
 </colgroup>
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="Input" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Input</th>
 <th id="Output" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Output</th>
 </tr>
@@ -2711,7 +2513,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 |  123  |  123 |   123   |   123  |
 |    1  |    1 |     1   |     1  |
 </code></pre></td>
-<td class="gt_row gt_left" headers="Output"><table>
+<td class="gt_row gt_left" headers="Output"><table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: right;">Right</th>
@@ -2748,7 +2550,6 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </div>
 </div>
 </div>
-</div>
 <div class="fragment">
 <p><span class="emoji" data-emoji="bulb">💡</span> Tip: Use a Markdown <a href="https://www.tablesgenerator.com/markdown_tables">table generator</a></p>
 </div>
@@ -2758,7 +2559,7 @@ Figure&nbsp;1: A schematic representing the multi-language input (e.g.&nbsp;Pyth
 </section>
 <section id="equations" class="slide level2">
 <h2>Equations</h2>
-<table style="width:62%;">
+<table class="caption-top" style="width:62%;">
 <colgroup>
 <col style="width: 38%">
 <col style="width: 23%">
@@ -2790,24 +2591,23 @@ $$E = mc^{2}$$</code></pre></td>
 <h2>Blocks</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<div id="tvzwkxhjpo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tvzwkxhjpo table {
+<div id="wcefaomqmm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wcefaomqmm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tvzwkxhjpo thead, #tvzwkxhjpo tbody, #tvzwkxhjpo tfoot, #tvzwkxhjpo tr, #tvzwkxhjpo td, #tvzwkxhjpo th {
+#wcefaomqmm thead, #wcefaomqmm tbody, #wcefaomqmm tfoot, #wcefaomqmm tr, #wcefaomqmm td, #wcefaomqmm th {
   border-style: none;
 }
 
-#tvzwkxhjpo p {
+#wcefaomqmm p {
   margin: 0;
   padding: 0;
 }
 
-#tvzwkxhjpo .gt_table {
+#wcefaomqmm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2833,12 +2633,12 @@ $$E = mc^{2}$$</code></pre></td>
   border-left-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_caption {
+#wcefaomqmm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tvzwkxhjpo .gt_title {
+#wcefaomqmm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2850,7 +2650,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-bottom-width: 0;
 }
 
-#tvzwkxhjpo .gt_subtitle {
+#wcefaomqmm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2862,7 +2662,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-top-width: 0;
 }
 
-#tvzwkxhjpo .gt_heading {
+#wcefaomqmm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2874,13 +2674,13 @@ $$E = mc^{2}$$</code></pre></td>
   border-right-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_bottom_border {
+#wcefaomqmm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_col_headings {
+#wcefaomqmm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2895,7 +2695,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-right-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_col_heading {
+#wcefaomqmm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2915,7 +2715,7 @@ $$E = mc^{2}$$</code></pre></td>
   overflow-x: hidden;
 }
 
-#tvzwkxhjpo .gt_column_spanner_outer {
+#wcefaomqmm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2927,15 +2727,15 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 4px;
 }
 
-#tvzwkxhjpo .gt_column_spanner_outer:first-child {
+#wcefaomqmm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tvzwkxhjpo .gt_column_spanner_outer:last-child {
+#wcefaomqmm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tvzwkxhjpo .gt_column_spanner {
+#wcefaomqmm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2947,11 +2747,11 @@ $$E = mc^{2}$$</code></pre></td>
   width: 100%;
 }
 
-#tvzwkxhjpo .gt_spanner_row {
+#wcefaomqmm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tvzwkxhjpo .gt_group_heading {
+#wcefaomqmm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2977,7 +2777,7 @@ $$E = mc^{2}$$</code></pre></td>
   text-align: left;
 }
 
-#tvzwkxhjpo .gt_empty_group_heading {
+#wcefaomqmm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2992,15 +2792,15 @@ $$E = mc^{2}$$</code></pre></td>
   vertical-align: middle;
 }
 
-#tvzwkxhjpo .gt_from_md > :first-child {
+#wcefaomqmm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tvzwkxhjpo .gt_from_md > :last-child {
+#wcefaomqmm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tvzwkxhjpo .gt_row {
+#wcefaomqmm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3019,7 +2819,7 @@ $$E = mc^{2}$$</code></pre></td>
   overflow-x: hidden;
 }
 
-#tvzwkxhjpo .gt_stub {
+#wcefaomqmm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3032,7 +2832,7 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#tvzwkxhjpo .gt_stub_row_group {
+#wcefaomqmm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3046,15 +2846,15 @@ $$E = mc^{2}$$</code></pre></td>
   vertical-align: top;
 }
 
-#tvzwkxhjpo .gt_row_group_first td {
+#wcefaomqmm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tvzwkxhjpo .gt_row_group_first th {
+#wcefaomqmm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tvzwkxhjpo .gt_summary_row {
+#wcefaomqmm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3064,16 +2864,16 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#tvzwkxhjpo .gt_first_summary_row {
+#wcefaomqmm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_first_summary_row.thick {
+#wcefaomqmm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tvzwkxhjpo .gt_last_summary_row {
+#wcefaomqmm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3083,7 +2883,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-bottom-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_grand_summary_row {
+#wcefaomqmm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3093,7 +2893,7 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#tvzwkxhjpo .gt_first_grand_summary_row {
+#wcefaomqmm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3103,7 +2903,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-top-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_last_grand_summary_row_top {
+#wcefaomqmm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3113,11 +2913,11 @@ $$E = mc^{2}$$</code></pre></td>
   border-bottom-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_striped {
+#wcefaomqmm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tvzwkxhjpo .gt_table_body {
+#wcefaomqmm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3126,7 +2926,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-bottom-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_footnotes {
+#wcefaomqmm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3140,7 +2940,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-right-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_footnote {
+#wcefaomqmm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3149,7 +2949,7 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#tvzwkxhjpo .gt_sourcenotes {
+#wcefaomqmm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3163,7 +2963,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-right-color: #D3D3D3;
 }
 
-#tvzwkxhjpo .gt_sourcenote {
+#wcefaomqmm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3171,74 +2971,74 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#tvzwkxhjpo .gt_left {
+#wcefaomqmm .gt_left {
   text-align: left;
 }
 
-#tvzwkxhjpo .gt_center {
+#wcefaomqmm .gt_center {
   text-align: center;
 }
 
-#tvzwkxhjpo .gt_right {
+#wcefaomqmm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tvzwkxhjpo .gt_font_normal {
+#wcefaomqmm .gt_font_normal {
   font-weight: normal;
 }
 
-#tvzwkxhjpo .gt_font_bold {
+#wcefaomqmm .gt_font_bold {
   font-weight: bold;
 }
 
-#tvzwkxhjpo .gt_font_italic {
+#wcefaomqmm .gt_font_italic {
   font-style: italic;
 }
 
-#tvzwkxhjpo .gt_super {
+#wcefaomqmm .gt_super {
   font-size: 65%;
 }
 
-#tvzwkxhjpo .gt_footnote_marks {
+#wcefaomqmm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tvzwkxhjpo .gt_asterisk {
+#wcefaomqmm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tvzwkxhjpo .gt_indent_1 {
+#wcefaomqmm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tvzwkxhjpo .gt_indent_2 {
+#wcefaomqmm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tvzwkxhjpo .gt_indent_3 {
+#wcefaomqmm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tvzwkxhjpo .gt_indent_4 {
+#wcefaomqmm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tvzwkxhjpo .gt_indent_5 {
+#wcefaomqmm .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
 </colgroup>
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="Input" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Input</th>
 <th id="Output" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Output</th>
 </tr>
@@ -3256,7 +3056,6 @@ $$E = mc^{2}$$</code></pre></td>
 </div>
 </div>
 </div>
-</div>
 <div class="footer">
 <p>Sources: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a>, <a href="https://drmowinckels.github.io/quartaki/">Dr.&nbsp;Monwinckels - Quartaki - 6 hour introduction ro Quarto</a></p>
 </div>
@@ -3265,24 +3064,23 @@ $$E = mc^{2}$$</code></pre></td>
 <h2>Links and images</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<div id="zcloquidtt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zcloquidtt table {
+<div id="uaugujnopn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uaugujnopn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zcloquidtt thead, #zcloquidtt tbody, #zcloquidtt tfoot, #zcloquidtt tr, #zcloquidtt td, #zcloquidtt th {
+#uaugujnopn thead, #uaugujnopn tbody, #uaugujnopn tfoot, #uaugujnopn tr, #uaugujnopn td, #uaugujnopn th {
   border-style: none;
 }
 
-#zcloquidtt p {
+#uaugujnopn p {
   margin: 0;
   padding: 0;
 }
 
-#zcloquidtt .gt_table {
+#uaugujnopn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3308,12 +3106,12 @@ $$E = mc^{2}$$</code></pre></td>
   border-left-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_caption {
+#uaugujnopn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zcloquidtt .gt_title {
+#uaugujnopn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3325,7 +3123,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-bottom-width: 0;
 }
 
-#zcloquidtt .gt_subtitle {
+#uaugujnopn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3337,7 +3135,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-top-width: 0;
 }
 
-#zcloquidtt .gt_heading {
+#uaugujnopn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3349,13 +3147,13 @@ $$E = mc^{2}$$</code></pre></td>
   border-right-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_bottom_border {
+#uaugujnopn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_col_headings {
+#uaugujnopn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3370,7 +3168,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-right-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_col_heading {
+#uaugujnopn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3390,7 +3188,7 @@ $$E = mc^{2}$$</code></pre></td>
   overflow-x: hidden;
 }
 
-#zcloquidtt .gt_column_spanner_outer {
+#uaugujnopn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3402,15 +3200,15 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 4px;
 }
 
-#zcloquidtt .gt_column_spanner_outer:first-child {
+#uaugujnopn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zcloquidtt .gt_column_spanner_outer:last-child {
+#uaugujnopn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zcloquidtt .gt_column_spanner {
+#uaugujnopn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3422,11 +3220,11 @@ $$E = mc^{2}$$</code></pre></td>
   width: 100%;
 }
 
-#zcloquidtt .gt_spanner_row {
+#uaugujnopn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zcloquidtt .gt_group_heading {
+#uaugujnopn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3452,7 +3250,7 @@ $$E = mc^{2}$$</code></pre></td>
   text-align: left;
 }
 
-#zcloquidtt .gt_empty_group_heading {
+#uaugujnopn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3467,15 +3265,15 @@ $$E = mc^{2}$$</code></pre></td>
   vertical-align: middle;
 }
 
-#zcloquidtt .gt_from_md > :first-child {
+#uaugujnopn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zcloquidtt .gt_from_md > :last-child {
+#uaugujnopn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zcloquidtt .gt_row {
+#uaugujnopn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3494,7 +3292,7 @@ $$E = mc^{2}$$</code></pre></td>
   overflow-x: hidden;
 }
 
-#zcloquidtt .gt_stub {
+#uaugujnopn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3507,7 +3305,7 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#zcloquidtt .gt_stub_row_group {
+#uaugujnopn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3521,15 +3319,15 @@ $$E = mc^{2}$$</code></pre></td>
   vertical-align: top;
 }
 
-#zcloquidtt .gt_row_group_first td {
+#uaugujnopn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zcloquidtt .gt_row_group_first th {
+#uaugujnopn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zcloquidtt .gt_summary_row {
+#uaugujnopn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3539,16 +3337,16 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#zcloquidtt .gt_first_summary_row {
+#uaugujnopn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_first_summary_row.thick {
+#uaugujnopn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zcloquidtt .gt_last_summary_row {
+#uaugujnopn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3558,7 +3356,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-bottom-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_grand_summary_row {
+#uaugujnopn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3568,7 +3366,7 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#zcloquidtt .gt_first_grand_summary_row {
+#uaugujnopn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3578,7 +3376,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-top-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_last_grand_summary_row_top {
+#uaugujnopn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3588,11 +3386,11 @@ $$E = mc^{2}$$</code></pre></td>
   border-bottom-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_striped {
+#uaugujnopn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zcloquidtt .gt_table_body {
+#uaugujnopn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3601,7 +3399,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-bottom-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_footnotes {
+#uaugujnopn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3615,7 +3413,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-right-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_footnote {
+#uaugujnopn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3624,7 +3422,7 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#zcloquidtt .gt_sourcenotes {
+#uaugujnopn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3638,7 +3436,7 @@ $$E = mc^{2}$$</code></pre></td>
   border-right-color: #D3D3D3;
 }
 
-#zcloquidtt .gt_sourcenote {
+#uaugujnopn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3646,74 +3444,74 @@ $$E = mc^{2}$$</code></pre></td>
   padding-right: 5px;
 }
 
-#zcloquidtt .gt_left {
+#uaugujnopn .gt_left {
   text-align: left;
 }
 
-#zcloquidtt .gt_center {
+#uaugujnopn .gt_center {
   text-align: center;
 }
 
-#zcloquidtt .gt_right {
+#uaugujnopn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zcloquidtt .gt_font_normal {
+#uaugujnopn .gt_font_normal {
   font-weight: normal;
 }
 
-#zcloquidtt .gt_font_bold {
+#uaugujnopn .gt_font_bold {
   font-weight: bold;
 }
 
-#zcloquidtt .gt_font_italic {
+#uaugujnopn .gt_font_italic {
   font-style: italic;
 }
 
-#zcloquidtt .gt_super {
+#uaugujnopn .gt_super {
   font-size: 65%;
 }
 
-#zcloquidtt .gt_footnote_marks {
+#uaugujnopn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zcloquidtt .gt_asterisk {
+#uaugujnopn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zcloquidtt .gt_indent_1 {
+#uaugujnopn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zcloquidtt .gt_indent_2 {
+#uaugujnopn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zcloquidtt .gt_indent_3 {
+#uaugujnopn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zcloquidtt .gt_indent_4 {
+#uaugujnopn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zcloquidtt .gt_indent_5 {
+#uaugujnopn .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
 </colgroup>
 <thead>
-<tr class="header gt_col_headings">
+<tr class="gt_col_headings header">
 <th id="Input" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Input</th>
 <th id="Output" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #000000; background-color: #D3D3D3" scope="col">Output</th>
 </tr>
@@ -3751,7 +3549,6 @@ $$E = mc^{2}$$</code></pre></td>
 </div>
 </div>
 </div>
-</div>
 <div class="footer">
 <p>Sources: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a>, <a href="https://drmowinckels.github.io/quartaki/">Dr.&nbsp;Monwinckels - Quartaki - 6 hour introduction ro Quarto</a></p>
 </div>
@@ -3782,32 +3579,30 @@ $$E = mc^{2}$$</code></pre></td>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="examples">Examples</h3>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb24-1"><a></a><span class="pp">---</span></span>
-<span id="cb24-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Document title"</span></span>
-<span id="cb24-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
-<span id="cb24-4"><a></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> vapor</span></span>
-<span id="cb24-5"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> pdf</span></span>
-<span id="cb24-6"><a></a><span class="pp">--- </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb25-1"><a></a><span class="pp">---</span></span>
+<span id="cb25-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Document title"</span></span>
+<span id="cb25-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="cb25-4"><a></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> vapor</span></span>
+<span id="cb25-5"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> pdf</span></span>
+<span id="cb25-6"><a></a><span class="pp">--- </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>The YAML header of <a href="{{< var source >}}/blob/main/index.qmd#L1-L12">these slides</a>:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb25-1"><a></a><span class="pp">---</span></span>
-<span id="cb25-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction to Quarto"</span></span>
-<span id="cb25-3"><a></a><span class="fu">subtitle</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb25-4"><a></a>  Part of the course: “Version Control of Code &amp; Data”</span>
-<span id="cb25-5"><a></a>  </span>
-<span id="cb25-6"><a></a>  [Slides](https://lennartwittkuhn.com/) |</span>
-<span id="cb25-7"><a></a>  [Source](https://github.com/lnnrtwttkhn/)</span>
-<span id="cb25-8"><a></a>  </span>
-<span id="cb25-9"><a></a>  License: CC BY 4.0</span>
-<span id="cb25-10"><a></a>  DOI</span>
-<span id="cb25-11"><a></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb25-12"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb26-1"><a></a><span class="pp">---</span></span>
+<span id="cb26-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Introduction to Quarto"</span></span>
+<span id="cb26-3"><a></a><span class="fu">subtitle</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb26-4"><a></a>  Part of the course: “Version Control of Code &amp; Data”</span>
+<span id="cb26-5"><a></a>  </span>
+<span id="cb26-6"><a></a>  [Slides](https://lennartwittkuhn.com/) |</span>
+<span id="cb26-7"><a></a>  [Source](https://github.com/lnnrtwttkhn/)</span>
+<span id="cb26-8"><a></a>  </span>
+<span id="cb26-9"><a></a>  License: CC BY 4.0</span>
+<span id="cb26-10"><a></a>  DOI</span>
+<span id="cb26-11"><a></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb26-12"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>YAML: Datenformat in konfiguartionsdateien</li>
@@ -3862,17 +3657,15 @@ $$E = mc^{2}$$</code></pre></td>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="examples-1">Examples</h3>
 <h4 id="input">Input</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb26-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb26-3"><a></a><span class="fu">plot</span>(x, y, <span class="at">main =</span> <span class="st">"Scatter Plot Example"</span>, <span class="at">xlab =</span> <span class="st">"X-Axis"</span>, <span class="at">ylab =</span> <span class="st">"Y-Axis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb27-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb27-3"><a></a><span class="fu">plot</span>(x, y, <span class="at">main =</span> <span class="st">"Scatter Plot Example"</span>, <span class="at">xlab =</span> <span class="st">"X-Axis"</span>, <span class="at">ylab =</span> <span class="st">"Y-Axis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
-<!-- -->
 <h4 id="output">Output</h4>
 <div class="cell">
 <div class="cell-output-display">
@@ -3884,33 +3677,29 @@ $$E = mc^{2}$$</code></pre></td>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="inline-code" class="slide level2">
 <h2>Inline code</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="input-1">Input</h3>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Code</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a></a><span class="an">Number of observations:</span><span class="co"> `r 8*20`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a></a><span class="an">Number of observations:</span><span class="co"> `r 8*20`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<!-- -->
 <h3 id="output-1">Output</h3>
 <p>Number of observations: 160</p>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>Code: you don’t have to use it for a recipe book but its possible</p>
 <style type="text/css">
@@ -3931,7 +3720,7 @@ $$E = mc^{2}$$</code></pre></td>
 <li>You can name and references objects like figures, tables etc.</li>
 <li>For example: <a href="#/sec-citations" class="quarto-xref">Section&nbsp;6.4</a> (<code>@sec-citations</code>)</li>
 </ul>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Type</th>
@@ -3976,7 +3765,7 @@ $$E = mc^{2}$$</code></pre></td>
 <li>Citations can also be added directly with <code>@</code></li>
 <li>References are stored in <a href="https://www.bibtex.org/">BibTeX</a> files in your project</li>
 </ul>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 42%">
 <col style="width: 57%">
@@ -4082,11 +3871,7 @@ Chacon, Scott, and Ben Straub. 2014. <em>Pro Git</em>. Apress. <a href="https://
 <section id="questions" class="title-slide slide level1 center">
 <h1>Questions?</h1>
 
-<div class="quarto-auto-generated-content">
-<div class="footer footer-default">
-<p>Introduction to Quarto</p>
-</div>
-</div>
+
 </section>
 
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
@@ -4096,7 +3881,11 @@ Chacon, Scott, and Ben Straub. 2014. <em>Pro Git</em>. Apress. <a href="https://
 </ol>
 </section>
     </div>
-  </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Introduction to Quarto</p>
+</div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="site_libs/revealjs/dist/reveal.js"></script>
@@ -4125,7 +3914,8 @@ Chacon, Scott, and Ben Straub. 2014. <em>Pro Git</em>. Apress. <a href="https://
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
 'smaller': false,
  
@@ -4358,18 +4148,7 @@ Chacon, Scott, and Ben Straub. 2014. <em>Pro Git</em>. Apress. <a href="https://
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -4401,7 +4180,27 @@ Chacon, Scott, and Ben Straub. 2014. <em>Pro Git</em>. Apress. <a href="https://
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/lnnrtwttkhn\.github\.io\/quarto-workshop\/");
@@ -4409,7 +4208,7 @@ Chacon, Scott, and Ben Straub. 2014. <em>Pro Git</em>. Apress. <a href="https://
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
