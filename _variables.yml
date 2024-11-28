@@ -1,5 +1,5 @@
 title: "Introduction to Quarto"
-subtitle: 'Part of the course: "Version Control of Code & Data"'
+subtitle: 'Part of the course "Track, organize and share your work: An introduction to Git for research"'
 project-name: "quarto-workshop"
 footer: "{{< var title >}}"
 source: "https://github.com/lnnrtwttkhn/{{< var project-name >}}"
@@ -23,3 +23,4 @@ linkedin: https://www.linkedin.com/in/lennart-wittkuhn-6a079a1a8/
 scholar: https://scholar.google.com/citations?user=GXvJB1kAAAAJ&hl=en
 orcid: 0000-0003-2966-6888
 orcid-link: "https://orcid.org/{{< var orcid >}}"
+course-project: "city-guide"

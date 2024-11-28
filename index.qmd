@@ -8,7 +8,7 @@ subtitle: |
   
   {{< var license-badge >}}
   {{< var doi-badge >}}
-date: 2024-05-13
+date: 2024-11-29
 ---
 
 ```{r}
@@ -50,11 +50,11 @@ gt_table_width = 1000
 :::
 
 ::: {.fragment}
-:bulb: Work on a new `quarto` branch in your `recipes` repo
+:bulb: Work on a new `quarto` branch in your `{{< var course-project >}}` repo
 :::
 
 ::: {.fragment}
-:bulb: Create a neat recipe file using Quarto
+:bulb: Create a neat new entry file using Quarto
 :::
 
 ::: {.fragment}
@@ -64,7 +64,7 @@ gt_table_width = 1000
 ::: {.fragment}
 **Outlook:** Your Quarto file can later be turned into a website!
 
-See <https://lennartwittkuhn.com/recipes/>
+See <https://lennartwittkuhn.com/uhh-eur-city-guide/>
 :::
 
 # Introduction to Quarto
@@ -202,7 +202,7 @@ quarto render
 
 ### Task 1
 
-1. Create a new `quarto` branch in your `recipes` repository and switch to it
+1. Create a new `quarto` branch in your `{{< var course-project >}}` repository and switch to it
 
 Remember, that `quarto` is just a branch name here.
 You can also choose a different name for the branch if you want to.
@@ -212,8 +212,8 @@ You can also choose a different name for the branch if you want to.
 
 ### Task 2
 
-1.    Create a new **empty Quarto file** called `recipes.qmd` in RStudio and save it in your `recipes` repository
-1.    Write a **short introduction note** to your recipes repository
+1.    Create a new **empty Quarto file** called `{{< var course-project >}}.qmd` and save it in your `{{< var course-project >}}` repository
+1.    Write a **short introduction note** to your {{< var course-project >}} repository
 1.    Switch between Quarto's visual and source mode
 1.    Render the file to HTML
 1.    **Stage** and **commit** your new file
@@ -412,7 +412,8 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Task 3
 
-1.    **Add a recipe** to the `recipes.qmd` file (quickly copy-paste from the web)
+1.    **Add a new entry** to the `{{< var course-project >}}.qmd` file
+1.    Topic: Interview each other about your favorite **cinema or theater**.
 1.    Format the text by applying at least **three types of Markdown syntax**
 1.    **Stage** and **commit** your changes
 
@@ -482,7 +483,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 When you are done and your Quarto file is rendering properly:
 
-4.    **Merge** your `quarto` branch into your main branch
+4.    **Merge** your `quarto` branch into your default branch (`main` or `master`)
 
 # More features
 
@@ -547,7 +548,7 @@ Number of observations: `r 8*20`
 :::::
 
 ::: {.notes}
-Code: you don't have to use it for a recipe book but its possible
+Code: you don't have to use it for a new entry book but its possible
 :::
 
 ## Referencing
@@ -641,13 +642,5 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ::: {#refs}
 :::
-
-## Tasks until next session
-
-1.  Ensure you have a Git repository named `recipes` set up on your computer
-2.  Inside the repository have a `recipes.qmd` file and (optionally) a `.gitignore` file
-3.  Inside the `recipes.qmd` file, share at least one recipe.
-
-If you've done this, you're all set!
 
 # Questions?
