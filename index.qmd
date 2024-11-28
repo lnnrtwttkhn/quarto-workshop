@@ -50,7 +50,7 @@ gt_table_width = 1000
 :::
 
 ::: {.fragment}
-:bulb: Work on a new `quarto` branch in your `{{< var course.project >}}` repo
+:bulb: Work on a new `quarto` branch in your `{{< var course-project >}}` repo
 :::
 
 ::: {.fragment}
@@ -202,8 +202,8 @@ quarto render
 
 ### Task 2
 
-1.    Create a new **empty Quarto file** called `{{< var course.project >}}.qmd` in RStudio and save it in your `{{< var course.project >}}` repository
-1.    Write a **short introduction note** to your {{< var course.project >}} repository
+1.    Create a new **empty Quarto file** called `{{< var course-project >}}.qmd` in RStudio and save it in your `{{< var course-project >}}` repository
+1.    Write a **short introduction note** to your {{< var course-project >}} repository
 1.    Switch between Quarto's visual and source mode
 1.    Render the file to HTML
 1.    **Stage** and **commit** your new file
@@ -380,7 +380,7 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Task 3
 
-1.    **Add a recipe** to the `{{< var course.project >}}.qmd` file (quickly copy-paste from the web)
+1.    **Add a recipe** to the `{{< var course-project >}}.qmd` file (quickly copy-paste from the web)
 1.    Format the text by applying at least **three types of Markdown syntax**
 1.    **Stage** and **commit** your changes
 
@@ -612,9 +612,9 @@ Sources: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-
 
 ## Tasks until next session
 
-1.  Ensure you have a Git repository named `{{< var course.project >}}` set up on your computer
-2.  Inside the repository have a `{{< var course.project >}}.qmd` file and (optionally) a `.gitignore` file
-3.  Inside the `{{< var course.project >}}.qmd` file, share at least one recipe.
+1.  Ensure you have a Git repository named `{{< var course-project >}}` set up on your computer
+2.  Inside the repository have a `{{< var course-project >}}.qmd` file and (optionally) a `.gitignore` file
+3.  Inside the `{{< var course-project >}}.qmd` file, share at least one recipe.
 
 If you've done this, you're all set!
 
