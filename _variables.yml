@@ -1,5 +1,5 @@
 title: "Introduction to Quarto"
-subtitle: 'Part of the course: "Version Control of Code & Data"'
+subtitle: 'Part of the course "Track, organize and share your work: An introduction to Git for research"'
 project-name: "quarto-workshop"
 footer: "{{< var title >}}"
 source: "https://github.com/lnnrtwttkhn/{{< var project-name >}}"
