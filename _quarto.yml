@@ -95,3 +95,4 @@ format:
     metadata-files:
       - _affiliations.yml
       - _variables.yml
+    html-table-processing: none

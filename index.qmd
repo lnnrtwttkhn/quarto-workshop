@@ -9,6 +9,7 @@ subtitle: |
   {{< var license-badge >}}
   {{< var doi-badge >}}
 date: 2024-11-29
+html-table-processing: none
 ---
 
 ```{r}
